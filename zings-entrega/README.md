@@ -36,4 +36,4 @@ En `branding/plantillas-redes/`, las plantillas de cada estilo en PNG listas par
 
 ## Logos para redes sociales
 
-En `branding/logos-redes/`: dieciséis avatares en tres familias (A · Anagrama de cuatro Z, B · Hombrera, C · ZINGS tipográfico), tres portadas de 1500 × 500 y tres marcas de agua blancas con fondo transparente. `png/` a 1080 px, `svg/` con la tipografía Inter embebida, `zings-logos-redes.zip` con todo y `zings-logos-redes.html` con la vista previa recortada en círculo.
+En `branding/logos-redes/`: veintiocho avatares en cinco familias (A · Anagrama de cuatro Z, B · Hombrera, C · ZINGS tipográfico, D · Bandera de capote, E · ZiNGS con filetes), cinco portadas de 1500 × 500 y cinco marcas de agua blancas con fondo transparente. `png/` a 1080 px, `svg/` con la tipografía Inter embebida, `zings-logos-redes.zip` con todo y `zings-logos-redes.html` con la vista previa recortada en círculo.
