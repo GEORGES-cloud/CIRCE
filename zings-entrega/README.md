@@ -27,3 +27,9 @@ Las cuatro portadas de estilo propio (Plaza de toros, Feria de Jerez, Cartel de 
 ## Fotografías
 
 La única fotografía es la de portada (`foto-portada.jpg`, el torero de espaldas ante el toro), aportada por ZiNGS, que va en las diez versiones. Todos los demás huecos de imagen (banners y tarjetas) llevan un marcador neutro a la espera de la fotografía propia de ZiNGS; no queda ninguna foto de muestra.
+
+## Guías de marca (PDF)
+
+En `branding/`, una guía por estilo (diez páginas, A4 apaisado): la idea, paleta con hex y proporciones, tipografía, las diez propuestas de logotipo con las tres recomendadas (o el símbolo Hombrera en la versión Apple Store), el logotipo en uso sobre cuatro fondos, la portada web en escritorio y móvil, producto y componentes, plantillas de redes y plan de redes (tono, pilares, ritmo del feed, hashtags, sí y no).
+
+En `branding/plantillas-redes/`, las plantillas de cada estilo en PNG listas para usar: post cuadrado (1080 × 1080), feed 4:5 (1080 × 1350) e historia (1080 × 1920).
