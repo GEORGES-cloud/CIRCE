@@ -37,3 +37,14 @@ En `branding/plantillas-redes/`, las plantillas de cada estilo en PNG listas par
 ## Logos para redes sociales
 
 En `branding/logos-redes/`: veintiocho avatares en cinco familias (A · Anagrama de cuatro Z, B · Hombrera, C · ZINGS tipográfico, D · Bandera de capote, E · ZiNGS con filetes), cinco portadas de 1500 × 500 y cinco marcas de agua blancas con fondo transparente. `png/` a 1080 px, `svg/` con la tipografía Inter embebida, `zings-logos-redes.zip` con todo y `zings-logos-redes.html` con la vista previa recortada en círculo.
+
+## Logotipos definitivos y manuales de marca
+
+Dos sistemas definitivos, con todo el texto convertido a trazados (no dependen de fuentes), en `branding/logos-definitivos/`:
+
+- **Sistema 1 · Anagrama**: cuatro Z geométricas + «ZINGS» + «REGALOS DE ESPAÑA». Recomendado como identidad principal: tiene símbolo propio, aguanta a 16 px, se borda y reproduce a una tinta.
+- **Sistema 2 · Motto**: «ZiNGS» en Bodoni Moda con doble filete y el lema «MADRID · DESDE LAS VENTAS». Firma de producto y packaging.
+
+Cada sistema incluye versión principal, horizontal, símbolo o monograma, logotipo, versiones reducidas, avatares, portadas e iconos (512/192/64/32/16), en tinta, negativo, fucsia y con acento; `svg/`, `png/`, `editables/` (texto vivo), `zings-logos-definitivos.html` (presentación con construcción y pruebas de tamaño) y las hojas de contacto.
+
+Los manuales de marca, uno por sistema, están en `branding/ZiNGS-manual-de-marca-S1-anagrama.pdf` y `branding/ZiNGS-manual-de-marca-S2-motto.pdf` (19 páginas A4 apaisado: logo completo, logotipo, horizontal, símbolos, área de respeto y tamaños mínimos, colores y texturas, tipografía, medidas para redes y look & feel).
