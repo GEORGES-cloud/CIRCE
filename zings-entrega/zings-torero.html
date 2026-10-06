@@ -1,0 +1,222 @@
+<title>ZiNGS Siluetas torero</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Bodoni+Moda:wght@500;600&family=Cinzel:wght@500;600;700&display=swap">
+<style>
+/* Layout: one mark explored. An original vector silhouette of torero, capote and bull (not a copy of the reference), in colour versions, with the three wordmark styles, forms, sizes and a simplified icon. */
+:root{
+  --bg:#F2F1EF; --fg:#17181A; --muted:#66696E; --line:#D9D8D5; --panel:#FFFFFF;
+  --ui:-apple-system,BlinkMacSystemFont,'SF Pro Text','Inter','Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;
+  --didone:'Bodoni Moda','Didot','Bodoni 72',Georgia,serif;
+  --fu:#D91B7A; --am:#F8C300; --ro:#C8102E; --ar:#E8C58E; --ne:#17141A;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#111214;--fg:#EDEDEE;--muted:#9A9DA2;--line:#2E3033;--panel:#1A1B1D;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#111214;--fg:#EDEDEE;--muted:#9A9DA2;--line:#2E3033;--panel:#1A1B1D;color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--ui);font-size:16px;line-height:1.55;padding-inline:clamp(16px,4vw,48px);padding-block:32px 64px;-webkit-font-smoothing:antialiased}
+*{box-sizing:border-box}
+.wrap{max-width:1280px;margin-inline:auto;display:flex;flex-direction:column;gap:28px}
+h1{font-weight:700;font-size:clamp(28px,4vw,46px);line-height:1.05;letter-spacing:-.025em;margin:0 0 8px;text-wrap:balance}
+.intro p{margin:0;max-width:74ch;color:var(--muted)}
+.warn{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--ro);border-radius:12px;padding:16px 20px;font-size:14px;color:var(--muted)}
+.warn b{color:var(--fg)}
+.bar{position:sticky;top:0;z-index:5;background:var(--bg);padding-block:10px;border-bottom:1px solid var(--line);display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+.bar span{font-size:13px;color:var(--muted)}
+.sw{display:flex;gap:8px}
+.sw button{width:34px;height:34px;border-radius:50%;border:2px solid transparent;cursor:pointer;padding:0}
+.sw button[aria-pressed="true"]{border-color:var(--fg)}
+section{display:flex;flex-direction:column;gap:16px}
+.sh{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:12px}
+.sh h2{font-weight:700;font-size:clamp(22px,2.6vw,32px);letter-spacing:-.025em;margin:0}
+.sh p{margin:0;color:var(--muted);font-size:14px;max-width:62ch}
+.hero{display:grid;grid-template-columns:1.2fr 1fr;gap:14px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.grid.three{grid-template-columns:repeat(3,1fr)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden;display:flex;flex-direction:column}
+/* --ink/--acc/--acc2 drive the scene; --wash/--name/--sub drive the brush torero (figure wash, name, subtitle), all set per background below */
+.logo{aspect-ratio:4/3;display:grid;place-items:center;padding:8%;background:var(--pbg,#fff);--ink:var(--pink-,#17141A);--acc:var(--pacc,#D91B7A);--acc2:var(--pacc2,#F8C300);--wash:var(--pwash,#2B2A2E);--name:var(--pname,#6B1020);--sub:var(--psub,#6E6E73);transition:background .3s}
+.hero .logo{aspect-ratio:auto;min-height:360px;flex:1}
+.logo.fixed{--pbg:#fff!important;--pink-:#17141A!important;--pacc:#17141A!important;--pacc2:#17141A!important;--pwash:#2B2A2E!important;--pname:#6B1020!important;--psub:#6E6E73!important}
+.logo.neg{--pbg:#17141A!important;--pink-:#fff!important;--pacc:#fff!important;--pacc2:#fff!important;--pwash:#D9D6DD!important;--pname:#fff!important;--psub:#B0AEB6!important}
+.logo.negc{--pbg:#17141A!important;--pink-:#fff!important;--pacc:#D91B7A!important;--pacc2:#F8C300!important;--pwash:#D9D6DD!important;--pname:#fff!important;--psub:#B0AEB6!important}
+.logo svg{width:100%;height:100%;overflow:visible}
+.sizes{display:flex;gap:22px;align-items:flex-end;justify-content:center;flex-wrap:wrap;width:100%}
+.sizes figure{margin:0;display:flex;flex-direction:column;align-items:center;gap:6px;font-size:11px;color:var(--muted)}
+.sizes svg{width:auto;height:auto} /* the pixel rows keep their real width/height attributes */
+.meta{padding:12px 14px 14px;display:flex;flex-direction:column;gap:2px;border-top:1px solid var(--line)}
+.meta b{font-size:14px;font-weight:600}
+.meta span{font-size:12px;color:var(--muted);line-height:1.45}
+.wrap[data-bg="blanco"] .logo{--pbg:#FFFFFF;--pink-:#17141A;--pacc:#D91B7A;--pacc2:#F8C300;--pwash:#2B2A2E;--pname:#6B1020;--psub:#6E6E73}
+.wrap[data-bg="arena"] .logo{--pbg:#E8C58E;--pink-:#17141A;--pacc:#D91B7A;--pacc2:#FFFFFF;--pwash:#2B2A2E;--pname:#6B1020;--psub:#4F4D52}
+.wrap[data-bg="negro"] .logo{--pbg:#17141A;--pink-:#FFFFFF;--pacc:#D91B7A;--pacc2:#F8C300;--pwash:#D9D6DD;--pname:#FFFFFF;--psub:#B0AEB6}
+.wrap[data-bg="fucsia"] .logo{--pbg:#D91B7A;--pink-:#FFFFFF;--pacc:#F8C300;--pacc2:#FFFFFF;--pwash:#FFFFFF;--pname:#FFFFFF;--psub:#FFF0F7}
+@media (max-width:900px){.hero,.grid,.grid.three{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.hero,.grid,.grid.three{grid-template-columns:1fr}}
+</style>
+
+<div class="wrap" id="wrap" data-bg="blanco">
+  <header class="intro">
+    <h1>ZiNGS, dos siluetas de torero</h1>
+    <p>Me has pasado dos referencias que te gustan: la escena del torero con el capote y el toro, y el logotipo de un torero con la figura a pincel sobre una línea y el nombre en serif. Las he vuelto a dibujar desde cero en vectores, con la misma idea pero con formas propias, adaptadas a ZiNGS. Primero la escena, después el torero a pincel.</p>
+  </header>
+
+  <div class="warn"><b>Sobre las imágenes que me pasaste.</b> La primera parece encontrada en internet y la segunda es el logotipo de un torero concreto, con su nombre. No las he copiado ni calcado: las dos siluetas son dibujos nuevos con la misma composición y el mismo espíritu. Aun así, antes de registrar o imprimir la marca conviene que un diseñador la depure y que se compruebe que no se parece demasiado a logotipos taurinos ya registrados, porque la escena del torero y el toro es muy habitual.</div>
+
+  <div class="bar">
+    <span>Fondo</span>
+    <div class="sw" role="group" aria-label="Fondo de prueba">
+      <button type="button" data-bg="blanco" aria-pressed="true" aria-label="Blanco" style="background:#fff;box-shadow:inset 0 0 0 1px #ccc"></button>
+      <button type="button" data-bg="arena" aria-pressed="false" aria-label="Arena" style="background:#E8C58E"></button>
+      <button type="button" data-bg="negro" aria-pressed="false" aria-label="Negro" style="background:#17141A"></button>
+      <button type="button" data-bg="fucsia" aria-pressed="false" aria-label="Fucsia" style="background:#D91B7A"></button>
+    </div>
+  </div>
+
+  <section>
+    <div class="sh"><h2>1 · La escena: torero, capote y toro</h2><p>Grande, en color y en tinta. El capote va entre el torero y el toro, a la altura de la cadera, y es la única pieza que cambia de color; el torero y el toro van siempre en tinta. Debajo, la variante con solo el exterior del capote en color y el icono reducido junto a la escena, a tamaños pequeños.</p></div>
+    <div class="hero" id="hero"></div>
+  </section>
+
+  <section>
+    <div class="sh"><h2>Con el nombre</h2><p>La silueta con los tres estilos de nombre que hemos usado en las webs, en horizontal y en vertical.</p></div>
+    <div class="grid three" id="names"></div>
+  </section>
+
+  <section>
+    <div class="sh"><h2>Formas y variantes de la escena</h2><p>Isotipo, isologo, monocromo, negativo y los tamaños mínimos. A 32 píxeles la escena se convierte en una mancha, así que propongo un icono reducido: solo el capote y los cuernos, en un trazo.</p></div>
+    <div class="grid" id="forms"></div>
+  </section>
+
+  <section>
+    <div class="sh"><h2>2 · El torero a pincel</h2><p>Un torero de pie, con el capote doblado sobre el antebrazo, dibujado como una aguada de una sola tinta en tres intensidades (pecho, capote y piernas) con los bordes blandos; una línea fina de suelo y el nombre en serif romana debajo, con un subtítulo muy espaciado. Es la misma idea que tu segunda referencia, con figura y letra propias. El granate del nombre solo se usa sobre blanco y arena; sobre negro y fucsia la tinta y el nombre pasan a blanco.</p></div>
+    <div class="hero" id="hero2"></div>
+    <div class="grid" id="forms2"></div>
+  </section>
+</div>
+
+<script>
+(function(){
+  var $=function(i){return document.getElementById(i)};
+  var SANS="Inter,'SF Pro Display',Arial,sans-serif",DID="'Bodoni Moda',Didot,'Bodoni 72',Georgia,serif";
+  var INK='var(--ink)',AC='var(--acc)',AC2='var(--acc2)';
+  function t(x,y,txt,o){o=o||{};return '<text x="'+x+'" y="'+y+'" text-anchor="'+(o.a||'middle')+'" font-family="'+(o.f||SANS)+'" font-weight="'+(o.w||700)+'" font-size="'+(o.s||48)+'" letter-spacing="'+(o.ls||0)+'" fill="'+(o.c||INK)+'">'+txt+'</text>'}
+  /* path helpers: F is a filled shape, L a thick line with round ends and joins */
+  function F(d,c){return '<path d="'+d+'" fill="'+c+'"/>'}
+  function L(d,w,c){return '<path d="'+d+'" fill="none" stroke="'+c+'" stroke-width="'+w+'" stroke-linecap="round" stroke-linejoin="round"/>'}
+  /* tapered horn: a quadratic centre line from the base p0 through p1 to the tip p2, the width going from w0 at the base to w1 at the tip */
+  function horn(p0,p1,p2,w0,w1,c){
+    var a=[],b=[],n=14;
+    for(var i=0;i<=n;i++){var t=i/n,u=1-t,
+      x=u*u*p0[0]+2*u*t*p1[0]+t*t*p2[0],y=u*u*p0[1]+2*u*t*p1[1]+t*t*p2[1],
+      dx=2*u*(p1[0]-p0[0])+2*t*(p2[0]-p1[0]),dy=2*u*(p1[1]-p0[1])+2*t*(p2[1]-p1[1]),
+      l=Math.hypot(dx,dy)||1,nx=-dy/l,ny=dx/l,w=(w0+(w1-w0)*t)/2;
+      a.push((x+nx*w).toFixed(1)+' '+(y+ny*w).toFixed(1));b.unshift((x-nx*w).toFixed(1)+' '+(y-ny*w).toFixed(1))}
+    return F('M'+a.join(' L')+' L'+b.join(' L')+'Z',c)}
+
+  /* The scene, drawn in a 400x300 box with the ground on y=245. The torero stands at the left in three quarters, leaning towards the bull;
+     the capote hangs from his hand between the two, at hip height, and swells like a sail towards the horns; the bull charges with the head low on the cloth.
+     capeCol/innerCol tint the capote (outer face and lining); everything else is ink. */
+  function scene(capeCol,innerCol,ink){
+    ink=ink||INK;
+    /* capote: a crescent hanging from the hand, belly towards the horns, the lower tip trailing near the ground; the lining shows along the inner fold */
+    var cape=F('M158 162 C226 166 256 262 172 242 C186 236 190 180 158 162Z',capeCol)+
+      (innerCol?F('M160 168 C195 184 191 236 170 240 C202 236 206 186 160 168Z',innerCol):'');
+    var torero=
+      F('M101 65 L104 54 Q119 48 134 54 L137 65Z',ink)+'<ellipse cx="99" cy="67" rx="4.5" ry="3.5" fill="'+ink+'"/>'+           /* montera, flat, with one macho */
+      '<circle cx="118" cy="74" r="12" fill="'+ink+'"/>'+L('M109 82 L103 90',3.5,ink)+                                           /* head and coleta */
+      '<rect x="113" y="84" width="10" height="8" fill="'+ink+'"/>'+                                                             /* neck */
+      F('M101 97 Q103 89 113 88 L133 87 Q142 87 141 96 L121 136 L99 136Z',ink)+                                                /* chaquetilla, leaning some 14 degrees towards the bull */
+      F('M99 138 L121 138 C127 148 128 156 124 164 L102 164 C94 156 94 146 99 138Z',ink)+                                       /* taleguilla, waist marked by the gap */
+      L('M107 160 L104 240',13,ink)+L('M120 160 L144 196 L146 240',13,ink)+                                                     /* straight leg, bent leg */
+      '<rect x="93" y="239" width="21" height="7" rx="3.5" fill="'+ink+'"/><rect x="137" y="239" width="23" height="7" rx="3.5" fill="'+ink+'"/>'+
+      L('M136 96 L148 124 L158 157',10,ink)+'<circle cx="159" cy="161" r="6" fill="'+ink+'"/>'+                                 /* arm to the capote, hand on its top edge */
+      L('M105 97 L92 122 L103 142',9,ink);                                                                                        /* tucked arm */
+    var bull=
+      F('M238 200 L236 220 Q237 228 246 230 L262 228 C268 242 282 242 288 218 C306 214 338 206 352 200 L356 200 C372 198 382 172 372 152 C358 144 332 142 314 136 C304 132 296 128 290 130 C282 134 276 150 270 166 L258 180 C254 186 244 194 238 200Z',ink)+ /* body: square muzzle, dewlap, level back, morrillo at the front */
+      horn([256,180],[236,176],[234,148],16,3,ink)+horn([266,172],[246,166],[246,140],14,3,ink)+                                   /* horns: thick crescents thinning forward and up */
+      L('M294 214 L288 240',11,ink)+L('M308 212 L314 240',11,ink)+L('M352 204 L346 240',11,ink)+L('M362 202 L378 224 L394 240',11,ink)+       /* legs, the near hind one pushing */
+      L('M372 164 L392 182',6,ink)+'<ellipse cx="396" cy="187" rx="5.5" ry="9" transform="rotate(-48 396 187)" fill="'+ink+'"/>';           /* straight tail with tassel */
+    return '<g transform="translate(-44 0)">'+cape+torero+bull+'</g>';
+  }
+  function S(inner,vb){return '<svg viewBox="'+(vb||'0 0 400 300')+'" xmlns="http://www.w3.org/2000/svg" role="img">'+inner+'</svg>'}
+  function card(name,desc,inner,cls){return '<div class="card"><div class="logo'+(cls?' '+cls:'')+'">'+inner+'</div><div class="meta"><b>'+name+'</b><span>'+desc+'</span></div></div>'}
+  /* reduced icon in a 64x64 box: the scene's capote scaled down (a solid crescent, belly to the right) and the horns as one open U stroke in front of its top edge */
+  function mini(ink,cape,inner){ink=ink||INK;cape=cape||AC;return F('M4 4 C53 7 75 76 14 62 C24 57 27 17 4 4Z',cape)+(inner?F('M5.4 8.3 C30.6 19.8 27.8 57.3 12.6 60.2 C35.7 57.3 38.6 21.3 5.4 8.3Z',inner):'')+L('M31 4 C28 18 35 28 45 28 C55 28 60 18 57 4',7,ink)}
+  function miniPx(px,ink,cape,inner){return '<svg width="'+px+'" height="'+px+'" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">'+mini(ink,cape,inner)+'</svg>'}
+  function scenePx(px){return '<svg width="'+px+'" height="'+(px*.75)+'" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">'+scene(AC,AC2)+'</svg>'}
+  function fig(svg,label){return '<figure>'+svg+'<span>'+label+'</span></figure>'}
+
+  $('hero').innerHTML=
+    card('Capote fucsia y amarillo','La versión principal: el capote con sus dos colores, torero y toro en tinta.',S(scene(AC,AC2)))+
+    card('Toda en tinta','Un solo color. Es la que más se parece a la referencia que me pasaste.',S(scene(INK,null)))+
+    card('Capote fucsia','Solo el exterior del capote en color.',S(scene(AC,null)))+
+    card('Icono reducido junto a la escena','A 64 px la escena aún se lee; a 32 ya no. El icono (capote y cuernos) aguanta hasta 16 px.','<div class="sizes">'+fig(scenePx(64),'escena 64 px')+fig(scenePx(32),'escena 32 px')+fig(miniPx(64,INK,AC,AC2),'icono 64 px')+fig(miniPx(32,INK,AC,AC2),'32 px')+fig(miniPx(16,INK,AC,null),'16 px')+'</div>');
+
+  $('names').innerHTML=
+    card('Con «zings»','Para las versiones funcionales y festivas: minúsculas apretadas.',S(scene(AC,AC2)+t(200,304,'zings',{s:70,w:800,ls:-3}),'0 0 400 340'))+
+    card('Con «ZiNGS»','Para las versiones serif: Didot espaciada con la «i» minúscula.',S(scene(AC,AC2)+t(200,304,'ZiNGS',{f:DID,s:62,w:500,ls:8}),'0 0 400 340'))+
+    card('Con «ZINGS»','Para las versiones sobrias: mayúsculas muy separadas.',S(scene(AC,AC2)+t(200,304,'ZINGS',{f:DID,s:56,w:500,ls:18}),'0 0 400 340'))+
+    card('Horizontal','Silueta a la izquierda, nombre a la derecha.',S('<g transform="translate(0 40) scale(.62)">'+scene(AC,AC2)+'</g>'+t(430,150,'zings',{s:80,w:800,ls:-3}),'0 0 600 260'))+
+    card('Horizontal serif','La misma disposición con el nombre en Didot.',S('<g transform="translate(0 40) scale(.62)">'+scene(AC,AC2)+'</g>'+t(430,148,'ZiNGS',{f:DID,s:66,w:500,ls:6}),'0 0 600 260'))+
+    card('Con lema','Nombre y debajo «Regalos de España», para bolsas y papel.',S(scene(AC,AC2)+t(200,302,'zings',{s:64,w:800,ls:-3})+t(200,334,'REGALOS DE ESPAÑA',{s:14,w:600,ls:5}),'0 0 400 356'));
+
+  $('forms').innerHTML=
+    card('Isotipo','La silueta sola, sin nombre. Para redes, bolsas y la pared de la tienda.',S(scene(AC,AC2)))+
+    card('Isologo','La escena dentro de un círculo de albero con la barrera roja, y el nombre debajo.',S('<circle cx="200" cy="150" r="140" fill="'+AC2+'"/><circle cx="200" cy="150" r="140" fill="none" stroke="#C8102E" stroke-width="14"/><g transform="translate(60 40) scale(.7)">'+scene(AC,'#FFF4E0','#17141A')+'</g>'+t(200,262,'zings',{s:34,w:800,ls:-2,c:'#17141A'})))+
+    card('Monocromo','Todo en un color, para sello y serigrafía.',S(scene(INK,null)+t(200,304,'zings',{s:70,w:800,ls:-3}),'0 0 400 340'),'fixed')+
+    card('Negativo con color','Blanco sobre negro, con el capote en color.',S(scene(AC,AC2,'#fff')+t(200,304,'zings',{s:70,w:800,ls:-3,c:'#fff'}),'0 0 400 340'),'negc')+
+    card('Tamaño mínimo de la escena','A 96 y 64 px se entiende; a 32 px se convierte en una mancha y hay que pasar al icono reducido.','<div class="sizes">'+fig(scenePx(96),'96 px')+fig(scenePx(64),'64 px')+fig(scenePx(32),'32 px')+'</div>')+
+    card('Icono reducido','Capote y cuernos, sin torero: los cuernos en un solo trazo abierto y el capote como media luna. Es lo que aguanta en un favicon o en un botón.',S(mini(INK,AC,AC2),'-4 -4 72 72'))+
+    card('Icono reducido, tamaños','El icono a 64, 32 y 16 px; a 16 se quita el forro amarillo.','<div class="sizes">'+fig(miniPx(64,INK,AC,AC2),'64 px')+fig(miniPx(32,INK,AC,AC2),'32 px')+fig(miniPx(16,INK,AC,null),'16 px')+'</div>')+
+    card('Icono en negativo','El icono reducido sobre negro.',S(mini('#fff',AC,AC2),'-4 -4 72 72'),'negc');
+
+
+  /* ---------- 2 · torero a pincel ---------- */
+  var CIN="Cinzel,'Trajan Pro',Georgia,serif";
+  var WASH='var(--wash)',NAME='var(--name)',SUB='var(--sub)';
+  /* soft brush edge (a light displacement and a small blur, no grain) and a blurred halo under the figure */
+  function painter(id){return '<filter id="wash'+id+'" x="-10%" y="-10%" width="120%" height="120%"><feTurbulence type="fractalNoise" baseFrequency=".018" numOctaves="2" seed="7" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="4" xChannelSelector="R" yChannelSelector="G"/><feGaussianBlur stdDeviation=".8"/></filter>'+
+    '<filter id="halo'+id+'" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="3"/></filter>'}
+  /* figure in a 300x400 box, feet on y=340: head in three quarters under a flat montera, torso leaning 7 degrees, hips pushed over the straight leg,
+     the other knee bent; the capote folds over the left forearm as a trapezium with a curved hem that ends above the knee */
+  function parts(c){return {
+    head:F('M131 62 C133 49 175 49 177 62 L179 67 L129 67Z',c)+'<ellipse cx="126" cy="65" rx="5" ry="3.5" fill="'+c+'"/><ellipse cx="153" cy="82" rx="15" ry="18" fill="'+c+'"/><rect x="146" y="94" width="14" height="14" fill="'+c+'"/>',
+    chest:F('M116 116 C116 107 128 104 140 104 L168 102 C182 101 191 103 191 111 L167 192 L119 192Z',c)+L('M120 118 L101 160 L112 204',16,c)+'<circle cx="114" cy="211" r="8" fill="'+c+'"/>'+L('M186 114 L200 164 L168 174',16,c),
+    hips:F('M118 194 L167 194 C170 212 165 234 159 254 L145 240 L131 254 C123 232 109 216 118 194Z',c),
+    legs:L('M134 248 L130 330',19,c)+L('M155 248 L176 290 L166 332',18,c)+'<ellipse cx="129" cy="338" rx="14" ry="5.5" fill="'+c+'"/><ellipse cx="170" cy="338" rx="14" ry="5.5" fill="'+c+'"/>',
+    cape:F('M169 177 L207 169 C214 198 224 232 234 260 C218 278 190 282 172 270 C172 240 170 206 169 177Z',c)
+  }}
+  /* layers of one ink: halo .18, hips and legs .65, head and chest .9, capote .8 (.85 when it is the fuchsia one); a few light specks suggest the embroidery.
+     flat: a plain silhouette with no filters, for small sizes */
+  function torero2(id,ink,capeCol,flat){
+    var c=ink||WASH,p=parts(c),cape=capeCol?parts(capeCol).cape:p.cape,all=p.head+p.chest+p.hips+p.legs+cape;
+    if(flat)return all;
+    return '<defs>'+painter(id)+'</defs>'+
+      '<g filter="url(#halo'+id+')" opacity=".18">'+all+'</g>'+
+      '<g filter="url(#wash'+id+')" opacity=".65">'+p.hips+p.legs+'</g>'+
+      '<g filter="url(#wash'+id+')" opacity=".9">'+p.head+p.chest+'</g>'+
+      '<g filter="url(#wash'+id+')" opacity="'+(capeCol?'.85':'.8')+'">'+cape+'</g>'+
+      '<g fill="var(--pbg,#fff)" opacity=".6"><circle cx="128" cy="113" r="1.5"/><circle cx="135" cy="121" r="1.5"/><circle cx="178" cy="110" r="1.5"/><circle cx="184" cy="118" r="1.5"/><circle cx="152" cy="116" r="1.5"/><circle cx="149" cy="128" r="1.5"/></g>';
+  }
+  /* lock-up: figure, ground line, name and subtitle. Colours follow the background tokens unless overridden. px sets a fixed pixel size; flat drops filters and subtitle */
+  function lock2(id,opt){opt=opt||{};var name=opt.name||'ZINGS',col=opt.col||NAME,sub=opt.sub||'REGALOS DE ESPAÑA',f=opt.f||CIN,w=opt.w||600,flat=opt.flat,h=flat?490:560;
+    return '<svg '+(opt.px?'width="'+opt.px+'" height="'+Math.round(opt.px*h/600)+'" ':'')+'viewBox="0 0 600 '+h+'" xmlns="http://www.w3.org/2000/svg" role="img">'+
+      '<g transform="translate(150 20) scale(1.02)">'+torero2(id,opt.ink,opt.cape,flat)+'</g>'+
+      '<rect x="60" y="368" width="480" height="2" fill="'+(opt.rule||INK)+'" opacity=".8"/>'+
+      '<text x="300" y="456" text-anchor="middle" font-family="'+f+'" font-weight="'+w+'" font-size="'+(opt.s||96)+'" letter-spacing="'+(opt.ls||6)+'" fill="'+col+'">'+name+'</text>'+
+      (flat?'':'<text x="300" y="500" text-anchor="middle" font-family="'+SANS+'" font-weight="500" font-size="18" letter-spacing="14" fill="'+(opt.subc||SUB)+'">'+sub+'</text>')+'</svg>'}
+  $('hero2').innerHTML=
+    card('Granate y grises','La más cercana a la referencia: figura en aguada por capas de una sola tinta, línea fina y nombre en serif romana granate, con subtítulo espaciado. Sobre negro y fucsia, tinta y nombre pasan a blanco.',lock2('a',{}))+
+    card('Capote fucsia','La misma figura, con el capote recogido en fucsia: el único color, como en el resto de la marca.',lock2('b',{cape:AC,col:INK}));
+  $('forms2').innerHTML=
+    card('Nombre en tinta','Serif romana en tinta: sigue al fondo, para cuando el granate no case.',lock2('c',{col:INK}))+
+    card('Nombre en fucsia','Nombre fucsia y figura en aguada: une esta dirección con la paleta del capote.',lock2('d',{col:AC}))+
+    card('Con «ZiNGS» serif','La grafía de la tienda, en la Didot de las versiones de moda.',lock2('e',{name:'ZiNGS',f:DID,w:500,s:92,ls:8,col:INK}))+
+    card('Con «Madrid»','Subtítulo con la ciudad en lugar del lema.',lock2('f',{sub:'M A D R I D'}))+
+    card('Horizontal','Figura a la izquierda y nombre a la derecha, con la línea de suelo compartida.','<svg viewBox="0 0 900 420" xmlns="http://www.w3.org/2000/svg" role="img"><g transform="translate(30 43) scale(.92)">'+torero2('g',null,AC)+'</g><rect x="40" y="356" width="820" height="2" fill="'+INK+'" opacity=".8"/><text x="590" y="250" text-anchor="middle" font-family="'+CIN+'" font-weight="600" font-size="104" letter-spacing="8" fill="'+NAME+'">ZINGS</text><text x="590" y="300" text-anchor="middle" font-family="'+SANS+'" font-weight="500" font-size="18" letter-spacing="14" fill="'+SUB+'">REGALOS DE ESPAÑA</text></svg>')+
+    card('Solo la figura','La figura a pincel sola, para cartelería, bolsas y la pared de la tienda.','<svg viewBox="40 30 220 330" xmlns="http://www.w3.org/2000/svg" role="img">'+torero2('h',null,AC)+'</svg>')+
+    card('Negativo','Figura en gris claro y nombre en blanco sobre negro.',lock2('i',{cape:AC}),'negc')+
+    card('Tamaño mínimo','A 160 px aún se aprecia la aguada; por debajo, la figura pasa a silueta plana sin filtros y se quita el subtítulo.','<div class="sizes">'+fig(lock2('j',{px:160}),'160 px, aguada')+fig(lock2('k',{px:120,flat:true}),'120 px, plana')+fig(lock2('l',{px:72,flat:true}),'72 px, plana')+'</div>');
+  var wrap=$('wrap');
+  Array.prototype.forEach.call(document.querySelectorAll('.sw button'),function(b){b.addEventListener('click',function(){
+    wrap.setAttribute('data-bg',b.getAttribute('data-bg'));
+    Array.prototype.forEach.call(document.querySelectorAll('.sw button'),function(x){x.setAttribute('aria-pressed',x===b)})})});
+})();
+</script>

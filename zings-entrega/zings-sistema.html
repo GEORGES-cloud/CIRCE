@@ -1,0 +1,176 @@
+<title>ZiNGS Sistema de marca</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Bodoni+Moda:ital,wght@0,400;0,500;0,600;1,500&display=swap">
+<style>
+/* Layout: a brand system sheet. For each of the three versions: the four forms (logotipo, isotipo, imagotipo, isologo), then variants (vertical, monocromo, negativo, tamaños mínimos, área de respeto). */
+:root{
+  --bg:#F2F1EF; --fg:#17181A; --muted:#66696E; --line:#D9D8D5; --panel:#FFFFFF;
+  --ui:-apple-system,BlinkMacSystemFont,'SF Pro Text','Inter','Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;
+  --fu:#D91B7A; --am:#F8C300; --ro:#C8102E; --ar:#E8C58E; --ne:#17141A;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#111214;--fg:#EDEDEE;--muted:#9A9DA2;--line:#2E3033;--panel:#1A1B1D;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#111214;--fg:#EDEDEE;--muted:#9A9DA2;--line:#2E3033;--panel:#1A1B1D;color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--ui);font-size:16px;line-height:1.55;padding-inline:clamp(16px,4vw,48px);padding-block:32px 64px;-webkit-font-smoothing:antialiased}
+*{box-sizing:border-box}
+.wrap{max-width:1280px;margin-inline:auto;display:flex;flex-direction:column;gap:30px}
+h1{font-weight:700;font-size:clamp(28px,4vw,46px);line-height:1.05;letter-spacing:-.025em;margin:0 0 8px;text-wrap:balance}
+.intro p{margin:0;max-width:74ch;color:var(--muted)}
+.gloss{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.g{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+.g b{display:block;font-size:15px;margin-bottom:4px}
+.g span{font-size:13px;color:var(--muted);line-height:1.5}
+.bar{position:sticky;top:0;z-index:5;background:var(--bg);padding-block:10px;border-bottom:1px solid var(--line);display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+.bar span{font-size:13px;color:var(--muted)}
+.sw{display:flex;gap:8px}
+.sw button{width:34px;height:34px;border-radius:50%;border:2px solid transparent;cursor:pointer;padding:0}
+.sw button[aria-pressed="true"]{border-color:var(--fg)}
+.sw button:focus-visible{outline:2px solid var(--fu);outline-offset:2px}
+.jump{display:flex;gap:8px;flex-wrap:wrap;margin-left:auto}
+.jump a{font:500 13px var(--ui);padding:7px 12px;border:1px solid var(--fg);border-radius:999px;color:var(--fg);text-decoration:none}
+section{display:flex;flex-direction:column;gap:18px;scroll-margin-top:70px}
+.sh{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:12px}
+.sh h2{font-weight:700;font-size:clamp(22px,2.6vw,32px);letter-spacing:-.025em;margin:0}
+.sh p{margin:0;color:var(--muted);font-size:14px;max-width:62ch}
+h3.row{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:10px 0 -6px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden;display:flex;flex-direction:column}
+.logo{aspect-ratio:4/3;display:grid;place-items:center;padding:10%;background:var(--pbg,#fff);--ink:var(--pink-,#17141A);--acc:var(--pacc,#D91B7A);--acc2:var(--pacc2,#F8C300);--acc3:var(--pacc3,#C8102E);transition:background .3s}
+.logo.fixed{--pbg:#fff!important;--pink-:#17141A!important;--pacc:#17141A!important;--pacc2:#17141A!important;--pacc3:#17141A!important}
+.logo.neg{--pbg:#17141A!important;--pink-:#fff!important;--pacc:#fff!important;--pacc2:#fff!important;--pacc3:#fff!important}
+.logo.ar{--pbg:#E8C58E!important;--pink-:#17141A!important}
+.logo svg{width:100%;height:100%;overflow:visible}
+.sizes{display:flex;gap:18px;align-items:flex-end;justify-content:center;width:100%;flex-wrap:wrap}
+.sizes figure{margin:0;display:flex;flex-direction:column;align-items:center;gap:6px;font-size:11px;color:var(--ink)}
+.sizes svg{overflow:visible}
+.wide{grid-column:span 2}
+.wide .logo{aspect-ratio:8/3}
+.meta{padding:12px 14px 14px;display:flex;flex-direction:column;gap:2px;border-top:1px solid var(--line)}
+.meta b{font-size:14px;font-weight:600}
+.meta span{font-size:12px;color:var(--muted);line-height:1.45}
+.wrap[data-bg="blanco"] .logo{--pbg:#FFFFFF;--pink-:#17141A;--pacc:#D91B7A;--pacc2:#F8C300;--pacc3:#C8102E}
+.wrap[data-bg="arena"] .logo{--pbg:#E8C58E;--pink-:#17141A;--pacc:#D91B7A;--pacc2:#FFFFFF;--pacc3:#C8102E}
+.wrap[data-bg="negro"] .logo{--pbg:#17141A;--pink-:#FFFFFF;--pacc:#D91B7A;--pacc2:#F8C300;--pacc3:#F8C300}
+.wrap[data-bg="fucsia"] .logo{--pbg:#D91B7A;--pink-:#FFFFFF;--pacc:#F8C300;--pacc2:#FFFFFF;--pacc3:#F8C300}
+.note{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px 20px;font-size:14px;color:var(--muted)}
+.note b{color:var(--fg)}
+@media (max-width:900px){.grid,.gloss{grid-template-columns:1fr 1fr}.jump{margin-left:0}}
+@media (max-width:520px){.grid,.gloss{grid-template-columns:1fr}.wide{grid-column:auto}.wide .logo{aspect-ratio:4/3}}
+</style>
+
+<div class="wrap" id="wrap" data-bg="blanco">
+  <header class="intro">
+    <h1>ZiNGS, sistema de marca</h1>
+    <p>Para cada versión he elegido una de sus diez propuestas y la he desarrollado en las cuatro formas que se piden a una marca, más sus variantes de uso. Así se ve si el símbolo aguanta solo en un imán o en un favicon, y si el nombre aguanta solo en una bolsa.</p>
+  </header>
+
+  <div class="gloss">
+    <div class="g"><b>Logotipo</b><span>Solo el nombre, con su letra. Se usa cuando hay espacio y hay que leer la marca: cabecera, bolsa, ticket.</span></div>
+    <div class="g"><b>Isotipo</b><span>Solo el símbolo, sin texto. Para el favicon, la app, el imán, el botón o el bordado.</span></div>
+    <div class="g"><b>Imagotipo</b><span>Símbolo y nombre juntos pero separables. Es la versión principal; cada parte puede ir sola.</span></div>
+    <div class="g"><b>Isologo</b><span>Símbolo y nombre fundidos en una sola pieza, inseparables. Para sellos, etiquetas colgantes y placas.</span></div>
+  </div>
+
+  <div class="bar">
+    <span>Fondo</span>
+    <div class="sw" role="group" aria-label="Fondo de prueba">
+      <button type="button" data-bg="blanco" aria-pressed="true" aria-label="Blanco" style="background:#fff;box-shadow:inset 0 0 0 1px #ccc"></button>
+      <button type="button" data-bg="arena" aria-pressed="false" aria-label="Arena" style="background:#E8C58E"></button>
+      <button type="button" data-bg="negro" aria-pressed="false" aria-label="Negro" style="background:#17141A"></button>
+      <button type="button" data-bg="fucsia" aria-pressed="false" aria-label="Fucsia" style="background:#D91B7A"></button>
+    </div>
+    <nav class="jump" aria-label="Ir a"><a href="#a">A · Upfront</a><a href="#b">B · Dolce &amp; Gabbana</a><a href="#c">C · Gucci</a></nav>
+  </div>
+
+  <section id="a">
+    <div class="sh"><h2>A · Upfront</h2><p>Propuesta elegida: el cuadro en diagonal, fucsia y amarillo (el capote visto en dos planos), con el nombre en minúsculas.</p></div>
+    <h3 class="row">Las cuatro formas</h3><div class="grid" id="a1"></div>
+    <h3 class="row">Variantes de uso</h3><div class="grid" id="a2"></div>
+    <h3 class="row">Favicon e icono de app</h3><div class="grid" id="a3"></div>
+  </section>
+
+  <section id="b">
+    <div class="sh"><h2>B · Dolce &amp; Gabbana</h2><p>Propuesta elegida: la Z Didot en un sello redondo, con el nombre «ZiNGS» en serif espaciada.</p></div>
+    <h3 class="row">Las cuatro formas</h3><div class="grid" id="b1"></div>
+    <h3 class="row">Variantes de uso</h3><div class="grid" id="b2"></div>
+    <h3 class="row">Favicon e icono de app</h3><div class="grid" id="b3"></div>
+  </section>
+
+  <section id="c">
+    <div class="sh"><h2>C · Gucci</h2><p>Propuesta elegida: el monograma de doble Z, con el nombre «ZINGS» en mayúsculas muy separadas y la franja fucsia y amarilla.</p></div>
+    <h3 class="row">Las cuatro formas</h3><div class="grid" id="c1"></div>
+    <h3 class="row">Variantes de uso</h3><div class="grid" id="c2"></div>
+    <h3 class="row">Favicon e icono de app</h3><div class="grid" id="c3"></div>
+  </section>
+
+  <div class="note"><b>Cómo leer esta hoja.</b> «Monocromo» es la versión en un solo color, para sellos, serigrafía o grabado. «Negativo» es la versión en blanco sobre fondo oscuro. «Tamaño mínimo» enseña el isotipo a 64, 32 y 16 píxeles, y a 32 y 16 no es el mismo dibujo encogido sino un glifo simplificado (menos anillos, menos desfase, trazos de al menos 1,5 px). «Área de respeto» es el aire que nadie debe invadir alrededor de la marca; el módulo «x» es la altura de la Z del logotipo y el cuadradito fucsia lo mide en la esquina. «Favicon e icono de app» enseña la baldosa redondeada a los tamaños que piden iOS y Android (los grandes, a escala) y el avatar circular de redes. Las fuentes son de Google Fonts; el logotipo definitivo se entrega con el texto convertido a trazados.</div>
+</div>
+
+<script>
+(function(){
+  var $=function(i){return document.getElementById(i)};
+  var SANS="Inter,'SF Pro Display',Arial,sans-serif",DID="'Bodoni Moda',Didot,'Bodoni 72',Georgia,serif";
+  var INK='var(--ink)',AC='var(--acc)',AC2='var(--acc2)';
+  function svg(inner,vb){return '<svg viewBox="'+(vb||'0 0 300 225')+'" xmlns="http://www.w3.org/2000/svg" role="img">'+inner+'</svg>'}
+  function t(x,y,txt,o){o=o||{};return '<text x="'+x+'" y="'+y+'" text-anchor="'+(o.a||'middle')+'" font-family="'+(o.f||SANS)+'" font-weight="'+(o.w||700)+'" font-size="'+(o.s||48)+'" letter-spacing="'+(o.ls||0)+'" fill="'+(o.c||INK)+'"'+(o.i?' font-style="italic"':'')+(o.extra||'')+'>'+txt+'</text>'}
+  function card(name,desc,inner,cls,wide){return '<div class="card'+(wide?' wide':'')+'"><div class="logo'+(cls?' '+cls:'')+'">'+inner.replace(/<svg viewBox/g,'<svg aria-label="ZiNGS, '+name+'" viewBox')+'</div><div class="meta"><b>'+name+'</b><span>'+desc+'</span></div></div>'}
+  function px(p,inner){return '<svg width="'+p+'" height="'+p+'" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">'+inner+'</svg>'}
+  function sizes(sym){return '<div class="sizes"><figure>'+sym(64)+'<span>64 px</span></figure><figure>'+sym(32)+'<span>32 px</span></figure><figure>'+sym(16)+'<span>16 px</span></figure></div>'}
+  /* área de respeto: el marco exterior y el módulo «x» (m unidades = altura de la Z) se ajustan en fitRespect() a la caja real del logo, medida en el navegador */
+  function respect(inner,m,label){return svg('<rect class="rs-out" fill="none" stroke="'+INK+'" stroke-width="1" stroke-dasharray="4 4" opacity=".6"/><rect class="rs-mod" fill="'+AC+'" opacity=".35"/><text class="rs-x" text-anchor="middle" font-family="'+SANS+'" font-weight="600" font-style="italic" font-size="11" fill="'+INK+'">x</text><g class="rs-mark" data-m="'+m+'">'+inner+'</g>'+t(150,214,'x = '+label,{s:11,w:500,ls:.5,extra:' opacity=".8"'}))}
+  function fitRespect(){Array.prototype.forEach.call(document.querySelectorAll('.rs-mark'),function(g){try{
+    var m=parseFloat(g.getAttribute('data-m')),x0=1e9,y0=1e9,x1=-1e9,y1=-1e9;
+    Array.prototype.forEach.call(g.querySelectorAll('*'),function(el){if(el.tagName==='g')return;var b=el.getBBox(),sw=parseFloat(el.getAttribute('stroke-width')||0)/2;
+      if(el.tagName==='text'){var asc=el.getAttribute('data-asc');if(asc===null)return;var y=parseFloat(el.getAttribute('y')),ls=parseFloat(el.getAttribute('letter-spacing')||0);x0=Math.min(x0,b.x);x1=Math.max(x1,b.x+b.width-ls);y0=Math.min(y0,y-parseFloat(asc));y1=Math.max(y1,y+parseFloat(el.getAttribute('data-desc')||0))}
+      else{x0=Math.min(x0,b.x-sw);y0=Math.min(y0,b.y-sw);x1=Math.max(x1,b.x+b.width+sw);y1=Math.max(y1,b.y+b.height+sw)}});
+    var s=g.ownerSVGElement,out=s.querySelector('.rs-out'),mod=s.querySelector('.rs-mod'),x=s.querySelector('.rs-x');
+    out.setAttribute('x',x0-m);out.setAttribute('y',y0-m);out.setAttribute('width',x1-x0+2*m);out.setAttribute('height',y1-y0+2*m);
+    mod.setAttribute('x',x0-m);mod.setAttribute('y',y0-m);mod.setAttribute('width',m);mod.setAttribute('height',m);
+    x.setAttribute('x',x0-m/2);x.setAttribute('y',y0-m/2+4)}catch(e){}})}
+  /* favicon, icono de app y avatar: objetos de color fijo (una baldosa no cambia con el fondo de la web); rx 14/64 ≈ la esquina de iOS */
+  var NE='#17141A',FU='#D91B7A',AM='#F8C300';
+  function tile(p,bg,glyph,round){return '<svg width="'+p+'" height="'+p+'" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">'+(round?'<circle cx="32" cy="32" r="32" fill="'+bg+'"/>':'<rect width="64" height="64" rx="14" fill="'+bg+'"/>')+glyph(p)+'</svg>'}
+  function icons(bg,glyph){return '<div class="sizes"><figure>'+tile(96,bg,glyph)+'<span>1024 px</span></figure><figure>'+tile(64,bg,glyph)+'<span>180 px</span></figure><figure>'+tile(32,bg,glyph)+'<span>32 px</span></figure><figure>'+tile(16,bg,glyph)+'<span>16 px</span></figure></div>'}
+  function avatars(bg,glyph){return '<div class="sizes"><figure>'+tile(120,bg,glyph,1)+'<span>Perfil · 400 px</span></figure><figure>'+tile(40,bg,glyph,1)+'<span>Comentario · 40 px</span></figure></div>'}
+
+  /* ---------- A ---------- */
+  /* monocromo: una sola tinta de verdad, con el triángulo calado en el color del fondo y el cuadro perfilado */
+  function aSym(x,y,s,mono){var c1=mono?INK:AC,c2=mono?'var(--pbg,#fff)':AC2;return '<rect x="'+x+'" y="'+y+'" width="'+s+'" height="'+s+'" fill="'+c1+'"/><path d="M'+x+' '+(y+s)+' L'+(x+s)+' '+y+' V'+(y+s)+'Z" fill="'+c2+'"/>'+(mono?'<rect x="'+x+'" y="'+y+'" width="'+s+'" height="'+s+'" fill="none" stroke="'+INK+'" stroke-width="'+(s*.06)+'"/>':'')}
+  /* a 32 y 16 px la diagonal lleva un filete del color del fondo (1 px en pantalla) para que los dos colores no se empasten */
+  function aSymPx(p){var cut=p<=16?4:p<=32?2:0;return px(p,aSym(0,0,64)+(cut?'<path d="M0 64 L64 0" stroke="var(--pbg,#fff)" stroke-width="'+cut+'"/>':''))}
+  function aGlyph(p){var cut=p<=16?4:p<=32?2:0;return '<rect x="14" y="14" width="36" height="36" fill="'+FU+'"/><path d="M14 50 L50 14 V50Z" fill="'+AM+'"/>'+(cut?'<path d="M14 50 L50 14" stroke="'+NE+'" stroke-width="'+cut+'"/>':'')}
+  var aLogo=t(150,130,'zings',{s:70,w:800,ls:-3});
+  var aIma=aSym(40,88,56)+t(190,134,'zings',{s:60,w:800,ls:-3});
+  var aIso=svg('<rect x="52" y="52" width="196" height="120" fill="'+AC+'"/><path d="M52 172 L248 52 V172Z" fill="'+AC2+'"/>'+t(150,128,'zings',{s:54,w:800,ls:-2,c:'#17141A'}));
+  $('a1').innerHTML=card('Logotipo','Solo el nombre en minúsculas apretadas.',svg(aLogo))+card('Isotipo','El cuadro en diagonal, solo. Fucsia por fuera, amarillo por dentro.',svg(aSym(100,62,100)))+card('Imagotipo','Símbolo a la izquierda y nombre a la derecha. Versión principal.',svg(aIma))+card('Isologo','El nombre dentro del cuadro partido. Para etiquetas y pegatinas.',aIso);
+  $('a2').innerHTML=card('Vertical','Símbolo encima del nombre, para espacios cuadrados.',svg(aSym(122,30,56)+t(150,150,'zings',{s:52,w:800,ls:-2})))+card('Monocromo','Un solo color, para sello o serigrafía: el triángulo va calado y el cuadro, perfilado.',svg(aSym(40,88,56,true)+t(190,134,'zings',{s:60,w:800,ls:-3})),'fixed')+card('Negativo','En blanco sobre oscuro.',svg(aSym(40,88,56,true)+t(190,134,'zings',{s:60,w:800,ls:-3})),'neg')+card('Tamaño mínimo y área de respeto','El isotipo a 64, 32 y 16 px; a 32 y 16 la diagonal lleva un filete. Abajo, el aire mínimo alrededor del imagotipo: x = altura de la z.',sizes(aSymPx)+respect(aSym(60,96,44)+t(190,130,'zings',{s:48,w:800,ls:-2,extra:' data-asc="26" data-desc="10"'}),26,'altura de la z'));
+  $('a3').innerHTML=card('Icono de app y favicon','Baldosa redondeada sobre tinta: 1024 y 180 px (simulados a escala), 32 y 16 px reales. A 32 y 16 la diagonal lleva filete.',icons(NE,aGlyph),null,true)+card('Avatar para redes','El símbolo en círculo sobre tinta, para el perfil y para el tamaño de un comentario.',avatars(NE,aGlyph));
+
+  /* ---------- B ---------- */
+  /* la Z ocupa 1,1·r (antes 1,3·r rozaba el anillo interior) */
+  function bSym(cx,cy,r,mono){var c=mono?INK:AC;return '<circle cx="'+cx+'" cy="'+cy+'" r="'+r+'" fill="none" stroke="'+INK+'" stroke-width="'+(r*.07)+'"/><circle cx="'+cx+'" cy="'+cy+'" r="'+(r*.85)+'" fill="none" stroke="'+INK+'" stroke-width="'+(r*.025)+'"/>'+t(cx,cy+r*.39,'Z',{f:DID,s:r*1.1,w:600,c:c})}
+  /* 32 y 16 px: un solo anillo con trazo de 1,5 px en pantalla y la Z al 75 % del hueco */
+  function bSymPx(p){if(p>=64)return px(p,bSym(32,32,30));var sw=p<=16?6:3,cap=(30-sw)*2*.75;return px(p,'<circle cx="32" cy="32" r="'+(30-sw/2)+'" fill="none" stroke="'+INK+'" stroke-width="'+sw+'"/>'+t(32,32+cap/2,'Z',{f:DID,s:(cap/.7).toFixed(1),w:700,c:AC}))}
+  function bGlyph(p){var o='';if(p>16)o+='<circle cx="32" cy="32" r="24" fill="none" stroke="#fff" stroke-width="'+(p<=32?3:2.2)+'"/>';if(p>=64)o+='<circle cx="32" cy="32" r="20.4" fill="none" stroke="#fff" stroke-width=".8"/>';var cap=p<=16?40:30;return o+t(32,32+cap/2,'Z',{f:DID,s:(cap/.7).toFixed(1),w:700,c:'#fff'})}
+  var bLogo=t(150,128,'ZiNGS',{f:DID,s:56,w:500,ls:10});
+  $('b1').innerHTML=card('Logotipo','Solo el nombre, Didot espaciada con la «i» minúscula.',svg(bLogo))+card('Isotipo','El sello: Z Didot fucsia en doble círculo.',svg(bSym(150,112,70)))+card('Imagotipo','Sello y nombre. Versión principal.',svg(bSym(62,112,42)+t(192,124,'ZiNGS',{f:DID,s:40,w:500,ls:6})))+card('Isologo','El nombre dentro del arco de la plaza, con la Z como clave.',svg('<path d="M70 190 V110 A80 80 0 0 1 230 110 V190" fill="none" stroke="'+INK+'" stroke-width="4"/>'+t(150,72,'Z',{f:DID,s:40,w:600,c:AC})+t(150,150,'ZiNGS',{f:DID,s:40,w:500,ls:6})));
+  $('b2').innerHTML=card('Vertical','Sello encima del nombre.',svg(bSym(150,74,44)+t(150,178,'ZiNGS',{f:DID,s:40,w:500,ls:6})))+card('Monocromo','Un solo color.',svg(bSym(62,112,42,true)+t(192,124,'ZiNGS',{f:DID,s:40,w:500,ls:6})),'fixed')+card('Negativo','En blanco sobre oscuro.',svg(bSym(62,112,42,true)+t(192,124,'ZiNGS',{f:DID,s:40,w:500,ls:6})),'neg')+card('Tamaño mínimo y área de respeto','El sello a 64, 32 y 16 px; a 32 y 16 queda un solo anillo y la Z crece. Abajo, el aire mínimo alrededor del imagotipo: x = altura de la Z.',sizes(bSymPx)+respect(bSym(96,112,34)+t(196,124,'ZiNGS',{f:DID,s:34,w:500,ls:4,extra:' data-asc="24"'}),24,'altura de la Z'));
+  $('b3').innerHTML=card('Icono de app y favicon','Baldosa fucsia con el sello en blanco: 1024 y 180 px (simulados a escala), 32 y 16 px reales. A 16 queda solo la Z.',icons(FU,bGlyph),null,true)+card('Avatar para redes','El sello en círculo fucsia, para el perfil y para el tamaño de un comentario.',avatars(FU,bGlyph));
+
+  /* ---------- C ---------- */
+  function cSym(cx,cy,s,mono,off){off=off==null?.14:off;var c1=mono?INK:AC,c2=INK,e=' data-asc="'+(s*.7).toFixed(1)+'"';return t(cx-s*off,cy+s*.36,'Z',{f:DID,s:s,w:500,c:c1,extra:e})+t(cx+s*off,cy+s*.36,'Z',{f:DID,s:s,w:500,c:c2,extra:e})}
+  /* 32 px: el desfase fucsia se reduce a la mitad; 16 px: una sola Z */
+  function cSymPx(p){return px(p,p>=64?cSym(32,32,56):p>=32?cSym(32,32,56,false,.07):t(32,32+56*.36,'Z',{f:DID,s:56,w:600,c:INK}))}
+  function cGlyph(p){var s=p<=16?44:40;return p<=16?t(32,32+s*.36,'Z',{f:DID,s:s,w:600,c:'#fff'}):t(32-s*(p<=32?.07:.14),32+s*.36,'Z',{f:DID,s:s,w:500,c:FU})+t(32+s*(p<=32?.07:.14),32+s*.36,'Z',{f:DID,s:s,w:500,c:'#fff'})}
+  /* monocromo: franjas sólidas con la central calada en el fondo, sin medias tintas */
+  function stripe(x,y,w,h,mono){return '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+(h/3)+'" fill="'+(mono?INK:AC)+'"/><rect x="'+x+'" y="'+(y+h/3)+'" width="'+w+'" height="'+(h/3)+'" fill="'+(mono?'var(--pbg,#fff)':AC2)+'"/><rect x="'+x+'" y="'+(y+2*h/3)+'" width="'+w+'" height="'+(h/3)+'" fill="'+(mono?INK:AC)+'"/>'}
+  var cLogo=t(150,128,'ZINGS',{f:DID,s:52,w:500,ls:16});
+  $('c1').innerHTML=card('Logotipo','Solo el nombre en mayúsculas muy separadas.',svg(cLogo))+card('Isotipo','El monograma: dos Z superpuestas, fucsia y negra.',svg(cSym(150,112,120)))+card('Imagotipo','Monograma y nombre. Versión principal.',svg(cSym(66,112,78)+t(196,124,'ZINGS',{f:DID,s:34,w:500,ls:8})))+card('Isologo','El nombre entre dos franjas, en una sola pieza.',svg(stripe(50,60,200,18)+t(150,138,'ZINGS',{f:DID,s:44,w:500,ls:12})+stripe(50,150,200,18)));
+  $('c2').innerHTML=card('Vertical','Monograma encima del nombre.',svg(cSym(150,74,74)+t(150,176,'ZINGS',{f:DID,s:34,w:500,ls:10})))+card('Monocromo','Un solo color: las dos Z se funden en una Z doble.',svg(cSym(66,112,78,true)+t(196,124,'ZINGS',{f:DID,s:34,w:500,ls:8})),'fixed')+card('Negativo','En blanco sobre oscuro.',svg(cSym(66,112,78,true)+t(196,124,'ZINGS',{f:DID,s:34,w:500,ls:8})),'neg')+card('Tamaño mínimo y área de respeto','El monograma a 64, 32 y 16 px; a 32 el desfase se reduce y a 16 queda una sola Z. Abajo, el aire mínimo alrededor del imagotipo: x = altura de la Z.',sizes(cSymPx)+respect(cSym(96,116,60)+t(196,128,'ZINGS',{f:DID,s:30,w:500,ls:6,extra:' data-asc="21"'}),21,'altura de la Z'));
+  $('c3').innerHTML=card('Icono de app y favicon','Baldosa sobre tinta con el monograma en fucsia y blanco: 1024 y 180 px (simulados a escala), 32 y 16 px reales. A 16 queda una sola Z.',icons(NE,cGlyph),null,true)+card('Avatar para redes','El monograma en círculo sobre tinta, para el perfil y para el tamaño de un comentario.',avatars(NE,cGlyph));
+
+  fitRespect();if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fitRespect);
+  var wrap=$('wrap');
+  Array.prototype.forEach.call(document.querySelectorAll('.sw button'),function(b){b.addEventListener('click',function(){
+    wrap.setAttribute('data-bg',b.getAttribute('data-bg'));
+    Array.prototype.forEach.call(document.querySelectorAll('.sw button'),function(x){x.setAttribute('aria-pressed',x===b)})})});
+})();
+</script>

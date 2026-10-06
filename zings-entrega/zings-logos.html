@@ -1,0 +1,370 @@
+<title>ZiNGS Logos</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Bodoni+Moda:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap">
+<style>
+/* Layout: a logo board. Three families of ten marks, each drawn as vector, previewed on a switchable background (white, arena, negro, fucsia). Colours: capote fucsia and amarillo, muleta rojo. */
+:root{
+  --bg:#F2F1EF; --fg:#17181A; --muted:#66696E; --line:#D9D8D5; --panel:#FFFFFF;
+  --ui:-apple-system,BlinkMacSystemFont,'SF Pro Text','Inter','Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;
+  --didone:'Bodoni Moda','Didot','Bodoni 72',Georgia,serif;
+  --fu:#D91B7A; --am:#F8C300; --ro:#C8102E; --ar:#E8C58E; --ne:#17141A;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#111214;--fg:#EDEDEE;--muted:#9A9DA2;--line:#2E3033;--panel:#1A1B1D;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#111214;--fg:#EDEDEE;--muted:#9A9DA2;--line:#2E3033;--panel:#1A1B1D;color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--ui);font-size:16px;line-height:1.55;padding-inline:clamp(16px,4vw,48px);padding-block:32px 64px;-webkit-font-smoothing:antialiased}
+*{box-sizing:border-box}
+.wrap{max-width:1280px;margin-inline:auto;display:flex;flex-direction:column;gap:28px}
+h1{font-weight:700;font-size:clamp(28px,4vw,46px);line-height:1.05;letter-spacing:-.025em;margin:0 0 8px;text-wrap:balance}
+.intro p{margin:0;max-width:74ch;color:var(--muted)}
+.bar{position:sticky;top:0;z-index:5;background:var(--bg);padding-block:10px;border-bottom:1px solid var(--line);display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+.bar span{font-size:13px;color:var(--muted)}
+.sw{display:flex;gap:8px}
+.sw button{width:34px;height:34px;border-radius:50%;border:2px solid transparent;cursor:pointer;padding:0}
+.sw button[aria-pressed="true"]{border-color:var(--fg)}
+.sw button:focus-visible{outline:2px solid var(--fu);outline-offset:2px}
+.jump{display:flex;gap:8px;flex-wrap:wrap;margin-left:auto}
+.jump a{font:500 13px var(--ui);padding:7px 12px;border:1px solid var(--fg);border-radius:999px;color:var(--fg);text-decoration:none}
+section{display:flex;flex-direction:column;gap:18px;scroll-margin-top:70px}
+.sh{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:12px}
+.sh h2{font-weight:700;font-size:clamp(22px,2.6vw,32px);letter-spacing:-.025em;margin:0}
+.sh p{margin:0;color:var(--muted);font-size:14px;max-width:60ch}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden;display:flex;flex-direction:column}
+.logo{aspect-ratio:5/3;display:grid;place-items:center;padding:8%;background:var(--pbg,#fff);--ink:var(--pink-,#17141A);--acc:var(--pacc,#D91B7A);--acc2:var(--pacc2,#F8C300);--acc3:var(--pacc3,#C8102E);--on-acc:var(--ponacc,#FFFFFF);--on-acc3:var(--ponacc3,#FFFFFF);--on-ink:var(--ponink,#F8C300);--sol:var(--psol,#D9A441);transition:background .3s}
+/* --on-acc / --on-acc3 / --on-ink: colour of text that sits ON the accent, the red accent or the ink; --sol: the «sol» half of the ruedo, an albero dark enough to read on each background */
+.logo svg{width:100%;height:100%;overflow:visible}
+.meta{padding:12px 14px 14px;display:flex;flex-direction:column;gap:2px;border-top:1px solid var(--line)}
+.meta b{font-size:14px;font-weight:600}
+.meta span{font-size:12px;color:var(--muted);line-height:1.45}
+.meta i{font-style:normal;font-size:11px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+/* preview backgrounds */
+.wrap[data-bg="blanco"] .logo{--pbg:#FFFFFF;--pink-:#17141A;--pacc:#D91B7A;--pacc2:#F8C300;--pacc3:#C8102E;--ponacc:#FFFFFF;--ponacc3:#FFFFFF;--ponink:#F8C300;--psol:#D9A441}
+.wrap[data-bg="arena"] .logo{--pbg:#E8C58E;--pink-:#17141A;--pacc:#D91B7A;--pacc2:#FFFFFF;--pacc3:#C8102E;--ponacc:#FFFFFF;--ponacc3:#FFFFFF;--ponink:#F8C300;--psol:#FFFFFF}
+.wrap[data-bg="negro"] .logo{--pbg:#17141A;--pink-:#FFFFFF;--pacc:#D91B7A;--pacc2:#F8C300;--pacc3:#F8C300;--ponacc:#FFFFFF;--ponacc3:#17141A;--ponink:#17141A;--psol:#F8C300}
+.wrap[data-bg="fucsia"] .logo{--pbg:#D91B7A;--pink-:#FFFFFF;--pacc:#F8C300;--pacc2:#FFFFFF;--pacc3:#F8C300;--ponacc:#17141A;--ponacc3:#17141A;--ponink:#D91B7A;--psol:#F8C300}
+.note{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px 20px;font-size:14px;color:var(--muted)}
+.note b{color:var(--fg)}
+@media (max-width:600px){.grid{grid-template-columns:1fr 1fr}.jump{margin-left:0}}
+</style>
+
+<div class="wrap" id="wrap" data-bg="blanco">
+  <header class="intro">
+    <h1>ZiNGS, noventa logotipos</h1>
+    <p>Diez propuestas por cada una de las nueve versiones de la tienda: las tres de marcas de referencia (Upfront, Dolce &amp; Gabbana, Gucci), las dos nuevas (Hermès, Loewe) y las cuatro de estilo propio (plaza de toros, feria, cartel, traje de luces). Son dibujos vectoriales, así que se ven nítidos a cualquier tamaño y se pueden pasar a un diseñador para afinarlos. Cambia el fondo con los círculos de abajo para ver cómo quedan sobre blanco, arena de plaza, negro y fucsia.</p>
+  </header>
+
+  <div class="bar">
+    <span>Fondo</span>
+    <div class="sw" role="group" aria-label="Fondo de prueba">
+      <button type="button" data-bg="blanco" aria-pressed="true" aria-label="Blanco" style="background:#fff;box-shadow:inset 0 0 0 1px #ccc"></button>
+      <button type="button" data-bg="arena" aria-pressed="false" aria-label="Arena" style="background:#E8C58E"></button>
+      <button type="button" data-bg="negro" aria-pressed="false" aria-label="Negro" style="background:#17141A"></button>
+      <button type="button" data-bg="fucsia" aria-pressed="false" aria-label="Fucsia" style="background:#D91B7A"></button>
+    </div>
+    <nav class="jump" aria-label="Ir a"><a href="#a">Upfront</a><a href="#b">D&amp;G</a><a href="#c">Gucci</a><a href="#h">Hermès</a><a href="#l">Loewe</a><a href="#p">Plaza</a><a href="#f">Feria</a><a href="#k">Cartel</a><a href="#t">Traje de luces</a></nav>
+  </div>
+
+  <section id="a">
+    <div class="sh"><h2>A · Versión Upfront</h2><p>Minúsculas, geometría clara y un solo acento de color. Marcas pensadas para leerse pequeñas en el móvil y en una etiqueta.</p></div>
+    <div class="grid" id="ga"></div>
+  </section>
+
+  <section id="b">
+    <div class="sh"><h2>B · Versión Dolce &amp; Gabbana</h2><p>Serif tipo Didot con la «i» minúscula, mayúsculas espaciadas y adornos taurinos: la plaza, la barrera, el capote y los lunares.</p></div>
+    <div class="grid" id="gb"></div>
+  </section>
+
+  <section id="c">
+    <div class="sh"><h2>C · Versión Gucci</h2><p>Sobriedad: letras muy separadas, un monograma Z que pueda ir solo en una etiqueta o un imán, y la franja fucsia y amarilla.</p></div>
+    <div class="grid" id="gc"></div>
+  </section>
+
+
+  <section id="h">
+    <div class="sh"><h2>D · Versión Hermès</h2><p>Casa clásica: serif centrada con «Madrid» debajo, lazos, cajas de regalo y óvalos de ex libris. El regalo como objeto.</p></div>
+    <div class="grid" id="gh"></div>
+  </section>
+
+  <section id="l">
+    <div class="sh"><h2>E · Versión Loewe</h2><p>Oficio y artesanía: mayúsculas anchas, un anagrama de cuatro Z, etiquetas de piel y pespuntes.</p></div>
+    <div class="grid" id="gl"></div>
+  </section>
+
+  <section id="p">
+    <div class="sh"><h2>Versión Plaza de toros</h2><p>La taurina: el ruedo partido en sol y sombra, la barrera, las placas numeradas, el burladero y la puerta grande.</p></div>
+    <div class="grid" id="gp"></div>
+  </section>
+
+  <section id="f">
+    <div class="sh"><h2>Versión Feria de Jerez</h2><p>La festiva: farolillos, lunares, toldos de rayas, banderines y el clavel.</p></div>
+    <div class="grid" id="gf"></div>
+  </section>
+
+  <section id="k">
+    <div class="sh"><h2>Versión Cartel de toros</h2><p>La tipográfica: mayúsculas pesadas, dobles filetes, sellos, cintas y el aire de la imprenta de carteles.</p></div>
+    <div class="grid" id="gk"></div>
+  </section>
+
+  <section id="t">
+    <div class="sh"><h2>Versión Traje de luces</h2><p>La bordada: lentejuelas, alamares, hombreras, machos y caireles, en puntos amarillos y fucsia.</p></div>
+    <div class="grid" id="gt"></div>
+  </section>
+
+  <div class="note"><b>Sobre el nombre.</b> He mantenido «ZiNGS» con la «i» minúscula en la versión B porque es la grafía actual de la tienda; en A va todo en minúsculas y en C todo en mayúsculas, por coherencia con cada estilo. Si la grafía de la marca es fija, dímelo y la respeto en las noventa. Las fuentes que uso aquí son de Google Fonts (Inter y Bodoni Moda); para registrar un logotipo conviene convertir el texto a trazados.</div>
+</div>
+
+<script>
+(function(){
+  var $=function(i){return document.getElementById(i)};
+  var SANS="Inter,'SF Pro Display',Arial,sans-serif",DID="'Bodoni Moda',Didot,'Bodoni 72',Georgia,serif";
+  var INK='var(--ink)',AC='var(--acc)',AC2='var(--acc2)',AC3='var(--acc3)';
+  /* text that sits on top of the accent, the red accent or the ink (see the CSS tokens); RO is the fixed red of a real barrera plaque, SOL the albero of the «sol» half */
+  var ONACC='var(--on-acc)',ONACC3='var(--on-acc3)',ONINK='var(--on-ink)',SOL='var(--sol)',RO='#C8102E';
+  /* thin ink rim for sequins drawn straight on the background (yellow on white would be 1.6:1) */
+  var RIM=' stroke="'+INK+'" stroke-width=".75"';
+  function svg(inner,vb){return '<svg viewBox="'+(vb||'0 0 300 180')+'" xmlns="http://www.w3.org/2000/svg" role="img">'+inner+'</svg>'}
+  function t(x,y,txt,o){o=o||{};return '<text x="'+x+'" y="'+y+'" text-anchor="'+(o.a||'middle')+'" font-family="'+(o.f||SANS)+'" font-weight="'+(o.w||700)+'" font-size="'+(o.s||48)+'" letter-spacing="'+(o.ls||0)+'" fill="'+(o.c||INK)+'"'+(o.i?' font-style="italic"':'')+(o.extra||'')+'>'+txt+'</text>'}
+  function cap(x,y,w,c0,c1){var h=w*1.25;return '<g transform="translate('+(x-w/2)+' '+(y-h/2)+') scale('+(w/200)+')"><path d="M48 44 C84 22 116 22 152 44 C182 98 176 176 144 222 C122 204 78 204 56 222 C24 176 18 98 48 44Z" fill="'+c0+'"/><path d="M68 64 C92 50 108 50 132 64 C152 106 148 160 128 192 C112 182 88 182 72 192 C52 160 48 106 68 64Z" fill="'+c1+'"/></g>'}
+  /* capote abierto y ancho (w de ancho): tela c0, forro c1 asomando como una banda, y otra vez c0 en el centro para que el nombre se apoye en un solo color */
+  function capW(x,y,w,c0,c1){var p='M-110 -32 Q0 -56 110 -32 Q112 24 0 48 Q-112 24 -110 -32Z';return '<g transform="translate('+x+' '+y+') scale('+(w/220)+')"><path d="'+p+'" fill="'+c0+'"/><path d="'+p+'" fill="'+c1+'" transform="scale(.92 .83)"/><path d="'+p+'" fill="'+c0+'" transform="scale(.84 .66)"/></g>'}
+
+  /* ---------- A · Upfront ---------- */
+  var A=[
+    ['Cuadro','El logotipo actual de la versión: minúsculas apretadas y un cuadro fucsia como punto final.',
+      svg(t(140,108,'zings',{s:64,w:800,ls:-3})+'<rect x="222" y="92" width="16" height="16" fill="'+AC+'"/>')],
+    ['Punto de la i','La «i» pierde su punto y lo recupera en fucsia, más grande. Una sola pieza de color.',
+      svg(t(150,110,'zıngs',{s:64,w:800,ls:-3,extra:' data-dot="1" data-dy="-54" data-r="8"'})+'<circle class="dot" r="8" fill="'+AC+'"/>')],
+    ['Pastilla','Nombre dentro de una pastilla de borde fino. Funciona como botón y como etiqueta.',
+      svg('<rect x="38" y="52" width="224" height="76" rx="38" fill="none" stroke="'+INK+'" stroke-width="4"/>'+t(150,108,'zings',{s:52,w:800,ls:-2}))],
+    ['Dos rayas','Marca «Z» construida con dos barras, fucsia y amarilla, como el capote por fuera y por dentro.',
+      svg('<path d="M42 54 H110 L42 114 H110" fill="none" stroke="'+AC+'" stroke-width="20" stroke-linejoin="miter" stroke-linecap="butt"/><path d="M42 54 H110 L42 114 H110" fill="none" stroke="'+AC2+'" stroke-width="6" stroke-linejoin="miter" stroke-linecap="butt"/>'+t(208,108,'zings',{s:52,w:800,ls:-2}))],
+    ['Placa 1','La placa numerada de la barrera, convertida en marca. El «1» es la primera tienda, en Alcalá 231.',
+      svg('<rect x="28" y="50" width="78" height="60" fill="#fff" stroke="'+RO+'" stroke-width="4"/><circle cx="67" cy="80" r="18" fill="none" stroke="'+RO+'" stroke-width="4"/>'+t(67,89,'1',{s:26,w:800,c:RO})+t(206,108,'zings',{s:52,w:800,ls:-2}))],
+    ['Con lema','Nombre y debajo el lema en mayúsculas pequeñas. Para cabeceras, bolsas y papel.',
+      svg(t(150,96,'zings',{s:64,w:800,ls:-3})+'<rect x="88" y="110" width="124" height="3" fill="'+AC+'"/>'+t(150,138,'REGALOS DE ESPAÑA',{s:13,w:600,ls:4}))],
+    ['Diagonal','Un cuadro partido en diagonal, fucsia y amarillo: el capote visto en dos planos.',
+      svg('<rect x="36" y="48" width="64" height="64" fill="'+AC+'"/><path d="M36 112 L100 48 V112Z" fill="'+AC2+'"/>'+t(205,108,'zings',{s:52,w:800,ls:-2}))],
+    ['Banda','Nombre en negativo sobre una banda fucsia. Pensado para la barra superior de la web.',
+      svg('<rect x="24" y="56" width="252" height="70" fill="'+AC+'"/>'+t(150,107,'zings',{s:54,w:800,ls:-2,c:ONACC}))],
+    ['Subrayado capote','Un subrayado doble, fucsia sobre amarillo, bajo el nombre. Discreto y reconocible.',
+      svg(t(150,96,'zings',{s:64,w:800,ls:-3})+'<rect x="60" y="112" width="180" height="8" fill="'+AC2+'"/><rect x="60" y="112" width="110" height="8" fill="'+AC+'"/>')],
+    ['Apilado','Nombre arriba y «madrid» debajo, alineados a la izquierda. Para el favicon y la app.',
+      svg(t(40,88,'zings',{s:60,w:800,ls:-3,a:'start'})+t(42,122,'madrid',{s:22,w:500,ls:2,a:'start',c:AC})+'<rect x="226" y="40" width="34" height="34" fill="'+AC+'"/>')]
+  ];
+
+  /* ---------- B · Dolce & Gabbana ---------- */
+  var B=[
+    ['Didot espaciado','El logotipo actual de la versión: serif de alto contraste y letras separadas.',
+      svg(t(150,106,'ZiNGS',{f:DID,s:54,w:500,ls:10}))],
+    ['Bajo el arco','El nombre dentro del arco de la plaza, con las rejas insinuadas.',
+      svg('<path d="M70 150 V88 A80 80 0 0 1 230 88 V150" fill="none" stroke="'+INK+'" stroke-width="4"/><g stroke="'+INK+'" stroke-width="2.5" opacity=".6"><path d="M110 80 V60M150 80 V48M190 80 V60M110 150 V130M150 150 V130M190 150 V130"/></g>'+t(150,116,'ZiNGS',{f:DID,s:38,w:500,ls:6}))],
+    ['Lunares','Una fila de lunares fucsia sobre el nombre, como un volante.',
+      svg('<g fill="'+AC+'"><circle cx="70" cy="52" r="9"/><circle cx="110" cy="52" r="9"/><circle cx="150" cy="52" r="9"/><circle cx="190" cy="52" r="9"/><circle cx="230" cy="52" r="9"/></g>'+t(150,120,'ZiNGS',{f:DID,s:54,w:500,ls:10}))],
+    ['Con filetes','Nombre entre dos filetes finos y la procedencia debajo, como una etiqueta de casa de moda.',
+      svg('<rect x="40" y="50" width="220" height="1.5" fill="'+INK+'"/>'+t(150,104,'ZiNGS',{f:DID,s:50,w:500,ls:10})+'<rect x="40" y="120" width="220" height="1.5" fill="'+INK+'"/>'+t(150,146,'MADRID · DESDE LAS VENTAS',{s:11,w:600,ls:4}))],
+    ['Capote detrás','El nombre sobre un capote abierto, fucsia con el forro amarillo. La pieza más taurina de la serie.',
+      svg(capW(150,92,220,AC,AC2)+t(150,108,'ZiNGS',{f:DID,s:42,w:600,ls:6,c:ONACC}))],
+    ['Placa de barrera','El nombre en una placa blanca con borde rojo, como los números de la barrera.',
+      svg('<rect x="40" y="52" width="220" height="76" fill="#fff" stroke="'+RO+'" stroke-width="4"/>'+t(150,104,'ZiNGS',{f:DID,s:44,w:500,ls:8,c:RO}))],
+    ['Cursiva','Didot en cursiva, con el punto de la «i» en fucsia. Más ligera y femenina.',
+      svg(t(150,108,'ZıNGS',{f:DID,s:58,w:500,ls:4,i:true,extra:' data-dot="1" data-dy="-44" data-r="5.5"'})+'<circle class="dot" r="5.5" fill="'+AC+'"/>')],
+    ['Doble marco','Marco de doble filete, como un cartel de toros, con el nombre centrado.',
+      svg('<rect x="30" y="38" width="240" height="104" fill="none" stroke="'+INK+'" stroke-width="3"/><rect x="38" y="46" width="224" height="88" fill="none" stroke="'+INK+'" stroke-width="1"/>'+t(150,102,'ZiNGS',{f:DID,s:44,w:500,ls:10}))],
+    ['Bloque fucsia','Nombre blanco sobre un bloque fucsia con un filete amarillo. Para redes y bolsas.',
+      svg('<rect x="30" y="44" width="240" height="92" fill="'+AC+'"/>'+t(150,104,'ZiNGS',{f:DID,s:46,w:500,ls:10,c:ONACC})+'<rect x="60" y="116" width="180" height="4" fill="'+AC2+'"/>')],
+    ['Sello Z','Una Z Didot grande en un sello redondo, con el nombre al lado. La Z puede ir sola.',
+      svg('<circle cx="78" cy="90" r="44" fill="none" stroke="'+INK+'" stroke-width="3"/><circle cx="78" cy="90" r="38" fill="none" stroke="'+INK+'" stroke-width="1"/>'+t(78,110,'Z',{f:DID,s:58,w:600,c:AC})+t(205,100,'ZiNGS',{f:DID,s:40,w:500,ls:6}))]
+  ];
+
+  /* ---------- C · Gucci ---------- */
+  var C=[
+    ['Mayúsculas separadas','El logotipo actual de la versión: mayúsculas Didot muy espaciadas.',
+      svg(t(150,106,'ZINGS',{f:DID,s:50,w:500,ls:16}))],
+    ['Doble Z','Dos Z superpuestas, una fucsia y otra negra, como un monograma de dos letras.',
+      svg(t(86,116,'Z',{f:DID,s:92,w:500,c:AC})+t(110,116,'Z',{f:DID,s:92,w:500,c:INK,extra:' opacity=".92"'})+t(220,104,'ZINGS',{f:DID,s:30,w:500,ls:8}))],
+    ['Rombo','La Z dentro de un rombo fino: el motivo del monograma repetido en la web.',
+      svg('<path d="M78 40 L128 90 L78 140 L28 90Z" fill="none" stroke="'+INK+'" stroke-width="2.5"/>'+t(78,108,'Z',{f:DID,s:54,w:600,c:AC})+t(215,104,'ZINGS',{f:DID,s:32,w:500,ls:8}))],
+    ['Franja','La franja de tres bandas, fucsia y amarilla, como marca junto al nombre.',
+      svg('<rect x="34" y="60" width="56" height="20" fill="'+AC+'"/><rect x="34" y="80" width="56" height="20" fill="'+AC2+'"/><rect x="34" y="100" width="56" height="20" fill="'+AC+'"/>'+t(200,104,'ZINGS',{f:DID,s:38,w:500,ls:10}))],
+    ['Z en espejo','Una Z y su reflejo, enlazadas. Un monograma simétrico para imanes y botones.',
+      svg('<g transform="translate(150 90)"><path d="M-44 -34 H-4 L-44 34 H-4" fill="none" stroke="'+INK+'" stroke-width="12" stroke-linejoin="round"/><path d="M44 -34 H4 L44 34 H4" fill="none" stroke="'+AC+'" stroke-width="12" stroke-linejoin="round"/></g>')],
+    ['Franja subrayada','El nombre con la franja debajo, a todo lo ancho. Para la cabecera de la web.',
+      svg(t(150,92,'ZINGS',{f:DID,s:48,w:500,ls:16})+'<rect x="50" y="110" width="200" height="6" fill="'+AC+'"/><rect x="50" y="116" width="200" height="6" fill="'+AC2+'"/><rect x="50" y="122" width="200" height="6" fill="'+AC+'"/>')],
+    ['Z en círculo','Una Z fina dentro de un círculo de trazo fino. Mínimo y elegante.',
+      svg('<circle cx="150" cy="90" r="50" fill="none" stroke="'+INK+'" stroke-width="2"/>'+t(150,112,'Z',{f:DID,s:66,w:400}))],
+    ['Ultraligero','Nombre en trazo fino con «MADRID» diminuto debajo. El más sobrio de los noventa.',
+      svg(t(150,98,'ZINGS',{f:DID,s:52,w:400,ls:18})+t(150,128,'MADRID',{s:11,w:500,ls:6,c:'var(--ink)',extra:' opacity=".7"'}))],
+    ['Capote abstracto','El capote reducido a dos arcos, fucsia por fuera y amarillo por dentro, al lado del nombre.',
+      svg('<path d="M48 54 C70 40 100 40 122 54 C132 86 128 118 112 136 C98 128 72 128 58 136 C42 118 38 86 48 54Z" fill="'+AC+'"/><path d="M64 66 C78 58 92 58 106 66 C114 88 110 112 100 124 C92 118 78 118 70 124 C60 112 56 88 64 66Z" fill="'+AC2+'"/>'+t(205,102,'ZINGS',{f:DID,s:34,w:500,ls:8}))],
+    ['Z y S enlazadas','La primera y la última letra entrelazadas, en fucsia y negro.',
+      svg(t(122,118,'Z',{f:DID,s:96,w:500,c:AC})+t(178,118,'S',{f:DID,s:96,w:500,c:INK,extra:' opacity=".9"'}))]
+  ];
+
+  function render(id,list,pre){$(id).innerHTML=list.map(function(l,i){return '<div class="card"><div class="logo">'+l[2].replace('<svg ','<svg aria-label="ZiNGS, '+l[0]+'" ')+'</div><div class="meta"><i>'+pre+(i+1)+'</i><b>'+l[0]+'</b><span>'+l[1]+'</span></div></div>'}).join('')}
+  render('ga',A,'A');render('gb',B,'B');render('gc',C,'C');
+  /* ---------- helpers ---------- */
+  function dotsRow(x0,y,n,gap,r,c,rim){var o='';for(var i=0;i<n;i++)o+='<circle cx="'+(x0+i*gap)+'" cy="'+y+'" r="'+r+'" fill="'+c+'"'+(rim?RIM:'')+'/>';return o}
+  function dotRect(x,y,w,h,step,r,c){var o='';for(var yy=y;yy<=y+h;yy+=step)for(var xx=x;xx<=x+w;xx+=step)o+='<circle cx="'+xx+'" cy="'+yy+'" r="'+r+'" fill="'+c+'"/>';return o}
+  /* hilos (flecos, caireles, cordones): la misma línea dibujada antes más gruesa en color de filete, para que el amarillo no se pierda sobre blanco */
+  function threads(lines,w,c,edge,ew){return '<g stroke="'+edge+'" stroke-width="'+(w+ew)+'" stroke-linecap="round">'+lines+'</g><g stroke="'+c+'" stroke-width="'+w+'" stroke-linecap="round">'+lines+'</g>'}
+  function faro(x,y,h,c0,c1){var w=h*.78,o='<line x1="'+x+'" y1="'+(y-h*.5)+'" x2="'+x+'" y2="'+(y-h*.42)+'" stroke="'+INK+'" stroke-width="2"/><clipPath id="fc'+(x|0)+(y|0)+'"><ellipse cx="'+x+'" cy="'+y+'" rx="'+(w/2)+'" ry="'+(h/2)+'"/></clipPath><g clip-path="url(#fc'+(x|0)+(y|0)+')">';for(var i=0;i<7;i++)o+='<rect x="'+(x-w/2+i*w/7)+'" y="'+(y-h/2)+'" width="'+(w/7+.5)+'" height="'+h+'" fill="'+(i%2?'#FFF4E0':c0)+'"/>';o+='</g><ellipse cx="'+x+'" cy="'+y+'" rx="'+(w/2)+'" ry="'+(h/2)+'" fill="none" stroke="'+INK+'" stroke-width="2"/><rect x="'+(x-w*.2)+'" y="'+(y-h/2-2)+'" width="'+(w*.4)+'" height="'+(h*.08)+'" fill="'+INK+'"/><rect x="'+(x-w*.2)+'" y="'+(y+h/2-h*.06)+'" width="'+(w*.4)+'" height="'+(h*.08)+'" fill="'+INK+'"/><g stroke="'+c1+'" stroke-width="2" stroke-linecap="round"><line x1="'+(x-5)+'" y1="'+(y+h/2+2)+'" x2="'+(x-6)+'" y2="'+(y+h/2+h*.16)+'"/><line x1="'+x+'" y1="'+(y+h/2+2)+'" x2="'+x+'" y2="'+(y+h/2+h*.18)+'"/><line x1="'+(x+5)+'" y1="'+(y+h/2+2)+'" x2="'+(x+6)+'" y2="'+(y+h/2+h*.16)+'"/></g>';return o}
+  function cond(x,y,txt,o){o=o||{};var sx=o.sx||.78;return '<text transform="translate('+x+' '+y+') scale('+sx+' 1)" text-anchor="middle" font-family="'+SANS+'" font-weight="900" font-size="'+(o.s||60)+'" letter-spacing="'+(o.ls||-2)+'" fill="'+(o.c||INK)+'">'+txt+'</text>'}
+
+  /* ---------- D · Hermès ---------- */
+  var H=[
+    ['Serif con Madrid','Nombre serif centrado y «MADRID» en pequeño debajo. El logotipo actual de la versión.',
+      svg(t(150,96,'ZiNGS',{f:DID,s:54,w:500,ls:6})+t(150,128,'MADRID',{f:DID,s:13,w:500,ls:8}))],
+    ['Lazo','Un lazo de cinta fucsia sobre el nombre, como el de una caja de regalo.',
+      svg('<path d="M150 58 C120 30 96 46 118 64 C96 80 120 96 150 68 C180 96 204 80 182 64 C204 46 180 30 150 58Z" fill="'+AC+'"/><circle cx="150" cy="62" r="7" fill="'+AC2+'"/>'+t(150,128,'ZiNGS',{f:DID,s:46,w:500,ls:6}))],
+    ['Caja de regalo','Caja con cinta cruzada; la tapa lleva la Z.',
+      svg('<rect x="36" y="56" width="70" height="70" fill="'+AC+'"/><rect x="66" y="56" width="10" height="70" fill="'+AC2+'"/><rect x="36" y="86" width="70" height="10" fill="'+AC2+'"/><rect x="30" y="46" width="82" height="16" fill="'+AC+'"/>'+t(205,104,'ZiNGS',{f:DID,s:40,w:500,ls:5}))],
+    ['Óvalo','Nombre dentro de un óvalo de doble trazo, como un ex libris.',
+      svg('<ellipse cx="150" cy="90" rx="118" ry="52" fill="none" stroke="'+INK+'" stroke-width="2.5"/><ellipse cx="150" cy="90" rx="110" ry="45" fill="none" stroke="'+INK+'" stroke-width="1"/>'+t(150,96,'ZiNGS',{f:DID,s:38,w:500,ls:6})+t(150,118,'MADRID',{f:DID,s:10,w:500,ls:6}))],
+    ['Z en cuadro','Una Z serif dentro de un cuadro fino, con el nombre al lado.',
+      svg('<rect x="40" y="52" width="76" height="76" fill="none" stroke="'+INK+'" stroke-width="2.5"/>'+t(78,111,'Z',{f:DID,s:62,w:500,c:AC})+t(205,100,'ZiNGS',{f:DID,s:40,w:500,ls:5}))],
+    ['Cinta','Una cinta con los extremos cortados lleva el nombre; debajo, la procedencia.',
+      svg('<path d="M30 70 H270 L256 92 L270 114 H30 L44 92Z" fill="'+AC+'"/>'+t(150,100,'ZiNGS',{f:DID,s:32,w:500,ls:8,c:ONACC})+t(150,140,'DESDE LAS VENTAS',{f:DID,s:11,w:500,ls:5}))],
+    ['Capote discreto','Un capote pequeño en el lugar de la «i», como un detalle de joyería.',
+      svg(t(150,110,'Z NGS',{f:DID,s:54,w:500,ls:4})+cap(119,90,30,AC,AC2))],
+    ['Cinta diagonal','El nombre con una cinta fina en diagonal, como el precinto de una caja.',
+      svg('<clipPath id="d8"><rect width="300" height="180"/></clipPath><g clip-path="url(#d8)"><rect x="30" y="86" width="240" height="7" fill="'+AC+'" transform="rotate(-6 150 90)"/></g>'+t(150,106,'ZiNGS',{f:DID,s:54,w:500,ls:6,extra:' stroke="var(--pbg,#fff)" stroke-width="7" paint-order="stroke"'}))],
+    ['Monograma ZM','Z y M entrelazadas: ZiNGS y Madrid en un solo signo.',
+      svg(t(128,108,'Z',{f:DID,s:88,w:500,c:AC})+t(176,108,'M',{f:DID,s:76,w:400,c:INK})+t(150,150,'ZiNGS',{f:DID,s:18,w:500,ls:6}))],
+    ['Sol de la plaza','Un medio sol amarillo sobre el nombre: el ruedo al mediodía.',
+      svg('<path d="M90 76 A60 60 0 0 1 210 76Z" fill="'+AC2+'"/><path d="M110 76 A40 40 0 0 1 190 76Z" fill="var(--pbg,#fff)"/>'+t(150,124,'ZiNGS',{f:DID,s:46,w:500,ls:6}))]
+  ];
+
+  /* ---------- E · Loewe ---------- */
+  /* four Z in a square: the right-hand and lower-left ones are mirrored (scale -1), never rotated 90°, so no Z turns into an N */
+  function anagram(cx,cy,s,c){var o='',q=s*.23,f=s*.46;for(var k=0;k<4;k++){var qx=cx+(k%2?q:-q),qy=cy+(k<2?-q:q),m=(k==1||k==2)?-1:1;o+='<text transform="translate('+qx+' '+qy+') scale('+m+' 1)" y="'+(f*.36).toFixed(1)+'" text-anchor="middle" font-family="'+SANS+'" font-weight="800" font-size="'+f+'" fill="'+c+'">Z</text>'}return o}
+  var L=[
+    ['Mayúsculas anchas','Nombre en mayúsculas pesadas y separadas. El logotipo actual de la versión.',
+      svg(t(150,106,'ZINGS',{s:50,w:800,ls:12}))],
+    ['Anagrama','Cuatro Z giradas en un cuadro, al modo de un anagrama de casa de piel.',
+      svg('<rect x="42" y="42" width="96" height="96" fill="none" stroke="'+INK+'" stroke-width="2"/>'+anagram(90,90,96,INK)+t(215,100,'ZINGS',{s:30,w:800,ls:8}))],
+    ['Doble Z espejo','Una Z y su reflejo, lado a lado.',
+      svg('<g transform="translate(150 90)"><text x="-30" y="26" text-anchor="middle" font-family="'+SANS+'" font-weight="800" font-size="72" fill="'+INK+'">Z</text><text x="-30" y="26" text-anchor="middle" font-family="'+SANS+'" font-weight="800" font-size="72" fill="'+AC+'" transform="scale(-1 1)">Z</text></g>')],
+    ['Con dirección','Nombre y la dirección de la casa debajo, como una etiqueta de fabricante.',
+      svg(t(150,92,'ZINGS',{s:50,w:800,ls:12})+'<rect x="70" y="106" width="160" height="2" fill="'+INK+'"/>'+t(150,130,'ALCALÁ 231 · MADRID',{s:12,w:600,ls:4}))],
+    ['Z en pastilla','Z en un cuadrado de esquinas redondeadas, relleno fucsia.',
+      svg('<rect x="42" y="46" width="88" height="88" rx="20" fill="'+AC+'"/>'+t(86,120,'Z',{s:70,w:800,c:ONACC})+t(212,100,'ZINGS',{s:30,w:800,ls:8}))],
+    ['Pespunte','El nombre cosido: un rectángulo de puntadas alrededor.',
+      svg('<rect x="40" y="52" width="220" height="76" fill="none" stroke="'+INK+'" stroke-width="2" stroke-dasharray="7 5" stroke-linecap="round"/>'+t(150,104,'ZINGS',{s:42,w:800,ls:10}))],
+    ['Etiqueta de piel','Forma de etiqueta colgante, con ojal, y el nombre grabado.',
+      svg('<path d="M60 56 H214 L250 90 L214 124 H60Z" fill="'+AC2+'"/><circle cx="226" cy="90" r="6" fill="var(--pbg,#fff)"/>'+t(136,102,'ZINGS',{s:34,w:800,ls:8,c:'#17141A'}))],
+    ['Vertical','Anagrama encima del nombre, para espacios cuadrados.',
+      svg(anagram(150,62,64,AC)+t(150,138,'ZINGS',{s:34,w:800,ls:10}))],
+    ['Trama','Una trama de Z pequeñas, como el estampado de una tela, con el nombre encima.',
+      svg((function(){var o='';for(var r=0;r<4;r++)for(var c=0;c<8;c++){if((r==1||r==2)&&c>0&&c<7)continue;o+='<text x="'+(48+c*29)+'" y="'+(56+r*26)+'" text-anchor="middle" font-family="'+SANS+'" font-weight="800" font-size="16" fill="'+INK+'" opacity=".16">Z</text>'}return o})()+t(150,102,'ZINGS',{s:34,w:800,ls:10}))],
+    ['Nudo','Dos trazos anudados, fucsia y amarillo, como una tira de piel.',
+      svg('<path d="M60 70 C110 70 110 110 150 110 C190 110 190 70 240 70" fill="none" stroke="'+AC+'" stroke-width="14" stroke-linecap="round"/><path d="M60 110 C110 110 110 70 150 70 C190 70 190 110 240 110" fill="none" stroke="'+AC2+'" stroke-width="14" stroke-linecap="round"/>'+t(150,152,'ZINGS',{s:22,w:800,ls:8}))]
+  ];
+
+  /* ---------- Plaza de toros ---------- */
+  /* albero (AC2), la sombra como albero oscuro plano y la barrera siempre roja: tres colores fijos en la relación, sin capas translúcidas */
+  function ruedo(cx,cy,r){return '<circle cx="'+cx+'" cy="'+cy+'" r="'+r+'" fill="'+AC2+'"/><path d="M'+(cx-r*.7)+' '+(cy-r*.7)+' A'+r+' '+r+' 0 0 1 '+(cx+r*.7)+' '+(cy+r*.7)+' L'+(cx-r*.7)+' '+(cy-r*.7)+'Z" fill="#A86F2B"/><circle cx="'+cx+'" cy="'+cy+'" r="'+r+'" fill="none" stroke="'+RO+'" stroke-width="'+(r*.14)+'"/>'}
+  var P=[
+    ['Ruedo','El ruedo visto desde arriba: albero, la diagonal de sol y sombra y la barrera roja.',
+      svg(ruedo(80,90,40)+t(205,106,'zings',{s:52,w:800,ls:-2}))],
+    ['Barrera','El nombre sobre la barrera: banda roja con el remate blanco.',
+      svg(t(150,86,'zings',{s:60,w:800,ls:-3})+'<rect x="40" y="104" width="220" height="18" fill="'+AC3+'"/><rect x="40" y="122" width="220" height="5" fill="var(--pbg,#fff)" stroke="'+INK+'" stroke-width="1"/>')],
+    ['Placa','El nombre en la placa numerada de la barrera.',
+      svg('<rect x="40" y="52" width="220" height="76" fill="#fff" stroke="'+RO+'" stroke-width="4"/>'+t(150,104,'zings',{s:46,w:800,ls:-2,c:RO}))],
+    ['Sol y sombra','El nombre partido entre letras: albero de sol y tinta de sombra.',
+      svg(t(150,108,'<tspan fill="'+SOL+'">zin</tspan><tspan fill="'+INK+'">gs</tspan>',{s:66,w:800,ls:-3}))],
+    ['Burladero','Dos tablones, rojo y blanco, delante del nombre.',
+      svg('<rect x="40" y="48" width="18" height="84" fill="'+AC3+'"/><rect x="64" y="48" width="18" height="84" fill="#fff" stroke="'+INK+'" stroke-width="2"/>'+t(190,106,'zings',{s:52,w:800,ls:-2}))],
+    ['Puerta grande','El arco de la puerta grande, con el nombre dentro.',
+      svg('<path d="M60 140 V90 A90 90 0 0 1 240 90 V140" fill="none" stroke="'+INK+'" stroke-width="5"/><rect x="60" y="134" width="180" height="6" fill="'+AC3+'"/>'+t(150,118,'zings',{s:40,w:800,ls:-2}))],
+    ['Z en el albero','Una Z sobre el círculo de albero, con la barrera alrededor.',
+      svg('<circle cx="86" cy="90" r="42" fill="'+AC2+'"/><circle cx="86" cy="90" r="42" fill="none" stroke="'+AC3+'" stroke-width="6"/>'+t(86,112,'Z',{s:62,w:800,c:'#17141A'})+t(208,106,'zings',{s:48,w:800,ls:-2}))],
+    ['Entrada','Forma de entrada de toros, con el nombre y la localidad.',
+      svg('<path d="M40 56 H260 V82 A8 8 0 0 0 260 98 V124 H40 V98 A8 8 0 0 0 40 82Z" fill="'+AC2+'"/><line x1="200" y1="56" x2="200" y2="124" stroke="'+INK+'" stroke-width="1.5" stroke-dasharray="4 4"/>'+t(120,100,'zings',{s:40,w:800,ls:-2,c:'#17141A'})+t(230,86,'TENDIDO',{s:9,w:700,ls:2,c:'#17141A'})+t(230,106,'7',{s:22,w:800,c:RO}))],
+    ['Capote en el ruedo','El capote sobre el círculo de albero.',
+      svg('<circle cx="80" cy="90" r="44" fill="'+AC2+'"/>'+cap(80,90,44,AC,'#FFF4E0')+t(205,106,'zings',{s:48,w:800,ls:-2}))],
+    ['Banderillas','Dos banderillas cruzadas de papel fucsia y amarillo.',
+      svg('<g stroke-linecap="round"><line x1="46" y1="130" x2="106" y2="50" stroke="#8A5A3A" stroke-width="5"/><line x1="106" y1="130" x2="46" y2="50" stroke="#8A5A3A" stroke-width="5"/></g>'+dotsRow(96,56,3,10,5,AC,1)+dotsRow(36,56,3,10,5,AC2,1)+t(200,106,'zings',{s:48,w:800,ls:-2}))]
+  ];
+
+  /* ---------- Feria de Jerez ---------- */
+  var Fe=[
+    ['Farolillo','Un farolillo de rayas como marca, con el nombre al lado.',
+      svg(faro(74,90,70,AC,AC2)+t(200,106,'zings',{s:48,w:800,ls:-2}))],
+    ['Lunares','El nombre sobre una banda de lunares claros.',
+      svg('<rect x="30" y="52" width="240" height="76" fill="'+AC+'"/><g opacity=".9">'+dotRect(44,64,212,52,26,4,ONACC)+'</g>'+t(150,104,'zings',{s:46,w:800,ls:-2,c:ONACC,extra:' stroke="'+AC+'" stroke-width="8" paint-order="stroke"'}))],
+    ['Toldo','El toldo de rayas de una caseta sobre el nombre.',
+      svg((function(){var o='';for(var i=0;i<10;i++){var x=40+i*22;o+='<path d="M'+x+' 44 H'+(x+22)+' V66 A11 11 0 0 1 '+x+' 66Z" fill="'+(i%2?'#fff':AC3)+'" stroke="'+INK+'" stroke-width="1"/>'}return o})()+t(150,126,'zings',{s:52,w:800,ls:-2}))],
+    ['Banderín','Un banderín triangular fucsia con la Z.',
+      svg('<path d="M44 46 H118 L81 124Z" fill="'+AC+'"/>'+t(81,88,'Z',{s:40,w:800,c:ONACC})+t(200,106,'zings',{s:48,w:800,ls:-2}))],
+    ['Escarapela','Nombre en una escarapela de bordes festoneados.',
+      svg((function(){var o='',cx=150,cy=90,n=22;for(var i=0;i<n;i++){var a=i/n*6.2832;o+='<circle cx="'+(cx+Math.cos(a)*62*1.6).toFixed(1)+'" cy="'+(cy+Math.sin(a)*52).toFixed(1)+'" r="9" fill="'+AC2+'"/>'}return o})()+'<ellipse cx="150" cy="90" rx="98" ry="50" fill="'+AC2+'"/>'+t(150,102,'zings',{s:40,w:800,ls:-2,c:'#17141A'}))],
+    ['Guirnalda','El nombre colgado de una guirnalda de farolillos.',
+      svg('<path d="M20 40 Q150 70 280 40" fill="none" stroke="'+INK+'" stroke-width="1.5"/>'+faro(70,70,30,AC,AC2)+faro(150,78,30,AC3,AC2)+faro(230,70,30,AC2,AC3)+t(150,138,'zings',{s:44,w:800,ls:-2}))],
+    ['Caseta','Una caseta de rayas en miniatura, con la puerta abierta.',
+      svg('<path d="M36 76 L78 44 L120 76Z" fill="'+AC3+'"/><rect x="40" y="76" width="76" height="52" fill="#fff" stroke="'+INK+'" stroke-width="2"/><rect x="48" y="76" width="10" height="52" fill="'+AC3+'"/><rect x="68" y="76" width="10" height="52" fill="'+AC3+'"/><rect x="88" y="76" width="10" height="52" fill="'+AC3+'"/><rect x="66" y="98" width="24" height="30" fill="#17141A"/>'+t(205,106,'zings',{s:48,w:800,ls:-2}))],
+    ['Clavel','Un clavel fucsia de cinco pétalos, como el del pelo.',
+      svg((function(){var o='',cx=78,cy=88;for(var i=0;i<6;i++){var a=i/6*6.2832;o+='<circle cx="'+(cx+Math.cos(a)*18).toFixed(1)+'" cy="'+(cy+Math.sin(a)*18).toFixed(1)+'" r="16" fill="'+AC+'"/>'}return o+'<circle cx="'+cx+'" cy="'+cy+'" r="12" fill="'+AC2+'"/>'})()+t(205,106,'zings',{s:48,w:800,ls:-2}))],
+    ['Abanico abierto','Un abanico abierto como copete, con el nombre debajo.',
+      svg((function(){var o='',cx=150,cy=98,r=72;for(var i=0;i<9;i++){var a0=Math.PI+i*Math.PI/9,a1=a0+Math.PI/9;o+='<path d="M'+cx+' '+cy+' L'+(cx+Math.cos(a0)*r).toFixed(1)+' '+(cy+Math.sin(a0)*r).toFixed(1)+' A'+r+' '+r+' 0 0 1 '+(cx+Math.cos(a1)*r).toFixed(1)+' '+(cy+Math.sin(a1)*r).toFixed(1)+'Z" fill="'+(i%2?'#FFF4E0':AC)+'" stroke="'+INK+'" stroke-width="1"/>'}return o+'<circle cx="'+cx+'" cy="'+cy+'" r="5" fill="'+INK+'"/>'})()+t(150,150,'zings',{s:38,w:800,ls:-2}))],
+    ['Letras con lunares','El nombre con lunares amarillos repartidos sobre las letras.',
+      svg(t(150,108,'zings',{s:66,w:800,ls:-3})+dotsRow(70,68,2,30,6,AC2,1)+dotsRow(140,96,3,34,6,AC2,1)+'<circle cx="112" cy="58" r="8" fill="'+AC+'"/>')]
+  ];
+
+  /* ---------- Cartel de toros ---------- */
+  var K=[
+    ['Apilado','«REGALA» pequeño y «ZINGS» grande, como las dos líneas de un cartel.',
+      svg(cond(150,66,'REGALA',{s:26,ls:4,sx:.9,c:AC3})+cond(150,130,'ZINGS',{s:76,ls:-2}))],
+    ['Doble filete','Nombre entre doble filete, el marco del cartel.',
+      svg('<rect x="30" y="40" width="240" height="100" fill="none" stroke="'+INK+'" stroke-width="3"/><rect x="37" y="47" width="226" height="86" fill="none" stroke="'+INK+'" stroke-width="1"/>'+cond(150,106,'ZINGS',{s:50,ls:0}))],
+    ['Sello','Un sello redondo rojo con el nombre y «Madrid».',
+      svg('<circle cx="86" cy="90" r="46" fill="'+AC3+'"/><circle cx="86" cy="90" r="40" fill="none" stroke="'+ONACC3+'" stroke-width="1.5"/>'+cond(86,86,'ZINGS',{s:22,ls:0,c:ONACC3,sx:.9})+t(86,106,'MADRID',{s:8,w:700,ls:3,c:ONACC3})+cond(212,106,'ZINGS',{s:40,ls:0}))],
+    ['Banda cruzada','El nombre en una banda fucsia inclinada, como la del precio.',
+      svg('<rect x="10" y="74" width="280" height="36" fill="'+AC+'" transform="rotate(-6 150 92)"/>'+'<text transform="translate(150 104) rotate(-6) scale(.85 1)" text-anchor="middle" font-family="'+SANS+'" font-weight="900" font-size="34" letter-spacing="2" fill="'+ONACC+'">ZINGS · MADRID</text>')],
+    ['Con rombos','Rombos rojos a los lados del nombre, ornamento de imprenta.',
+      svg('<path d="M40 90 L52 78 L64 90 L52 102Z" fill="'+AC3+'"/><path d="M236 90 L248 78 L260 90 L248 102Z" fill="'+AC3+'"/>'+cond(150,106,'ZINGS',{s:48,ls:2}))],
+    ['Cartelito','El nombre en un pequeño cartel vertical, con cabecera y pie de color.',
+      svg('<rect x="48" y="30" width="78" height="120" fill="#FFF4E0" stroke="'+INK+'" stroke-width="3"/><rect x="48" y="30" width="78" height="20" fill="'+AC3+'"/><rect x="48" y="128" width="78" height="22" fill="'+AC+'"/>'+cond(87,98,'ZINGS',{s:22,ls:0,sx:.9,c:'#17141A'})+t(87,118,'MADRID',{s:7,w:700,ls:3,c:'#17141A'})+cond(205,106,'ZINGS',{s:40,ls:0}))],
+    ['Z de madera','Una Z enorme de tipo de madera, con el nombre a sus pies.',
+      svg(cond(150,118,'Z',{s:130,ls:0,c:AC3,sx:.9})+'<rect x="104" y="124" width="92" height="22" fill="var(--pbg,#fff)"/>'+cond(150,141,'ZINGS',{s:20,ls:3,sx:.9}))],
+    ['Cabecera','Franja roja y amarilla arriba, como la cabecera de un cartel de plaza.',
+      svg('<rect x="40" y="44" width="220" height="12" fill="'+AC3+'"/><rect x="40" y="56" width="220" height="6" fill="'+AC2+'"/>'+cond(150,122,'ZINGS',{s:56,ls:0}))],
+    ['Número','«N.º 231», la casa de Alcalá, junto al nombre.',
+      svg(cond(110,106,'ZINGS',{s:50,ls:0})+'<rect x="196" y="60" width="64" height="60" fill="none" stroke="'+INK+'" stroke-width="2"/>'+t(228,78,'N.º',{s:9,w:700,ls:2})+t(228,108,'231',{s:28,w:900,c:AC3}))],
+    ['Cinta','Una cinta de extremos partidos lleva el nombre; arriba, la fecha.',
+      svg(t(150,54,'DESDE LAS VENTAS',{s:9,w:700,ls:3})+'<path d="M26 72 H274 L258 94 L274 116 H26 L42 94Z" fill="'+INK+'"/>'+cond(150,104,'ZINGS',{s:34,ls:3,c:ONINK,sx:.9}))]
+  ];
+
+  /* ---------- Traje de luces ---------- */
+  function dotFrame(x,y,w,h,c,rim){var o='',e=rim?RIM:'';for(var xx=x;xx<=x+w;xx+=10)o+='<circle cx="'+xx+'" cy="'+y+'" r="2.4" fill="'+c+'"'+e+'/><circle cx="'+xx+'" cy="'+(y+h)+'" r="2.4" fill="'+c+'"'+e+'/>';for(var yy=y+10;yy<y+h;yy+=10)o+='<circle cx="'+x+'" cy="'+yy+'" r="2.4" fill="'+c+'"'+e+'/><circle cx="'+(x+w)+'" cy="'+yy+'" r="2.4" fill="'+c+'"'+e+'/>';return o}
+  var Tl=[
+    ['Marco bordado','El nombre con un marco de lentejuelas amarillas.',
+      svg(dotFrame(38,48,224,84,AC2,1)+t(150,104,'zings',{s:46,w:800,ls:-2}))],
+    ['Z de puntos','Una Z hecha solo de lentejuelas.',
+      svg((function(){var o='',pts=[];for(var i=0;i<=6;i++)pts.push([44+i*10,52]);for(var j=1;j<6;j++)pts.push([104-j*10,52+j*74/6]);for(var k=0;k<=6;k++)pts.push([44+k*10,126]);pts.forEach(function(p,i){o+='<circle cx="'+p[0]+'" cy="'+p[1].toFixed(1)+'" r="4.5" fill="'+(i%2?AC2:AC)+'"'+RIM+'/>'});return o})()+t(200,106,'zings',{s:48,w:800,ls:-2}))],
+    ['Alamares','Dos alamares (los cordones de la chaquetilla) flanquean el nombre.',
+      svg(threads('<path d="M40 70 C60 60 60 80 40 90 C60 100 60 120 40 110" fill="none"/><path d="M260 70 C240 60 240 80 260 90 C240 100 240 120 260 110" fill="none"/>',5,AC2,INK,1.5)+t(150,104,'zings',{s:48,w:800,ls:-2}))],
+    ['Bloque bordado','Nombre y lentejuelas claras sobre un bloque fucsia.',
+      svg('<rect x="30" y="48" width="240" height="84" fill="'+AC+'"/>'+dotFrame(40,58,220,64,ONACC)+t(150,104,'zings',{s:44,w:800,ls:-2,c:ONACC}))],
+    ['Subrayado de lentejuelas','Una línea de puntos amarillos bajo el nombre.',
+      svg(t(150,96,'zings',{s:62,w:800,ls:-3})+dotsRow(66,118,18,10,3.2,AC2,1))],
+    ['Hombrera','La hombrera del traje: medio círculo con flecos, sobre el nombre.',
+      svg('<path d="M90 70 A60 60 0 0 1 210 70Z" fill="'+AC+'"/>'+dotsRow(98,66,10,11.5,3,AC2)+threads((function(){var o='';for(var i=0;i<11;i++)o+='<line x1="'+(96+i*10.8).toFixed(1)+'" y1="72" x2="'+(96+i*10.8).toFixed(1)+'" y2="84"/>';return o})(),2.5,AC2,AC,1.5)+t(150,128,'zings',{s:44,w:800,ls:-2}))],
+    ['Machos','Los machos (borlas) de la taleguilla cuelgan del nombre.',
+      svg(t(150,90,'zings',{s:56,w:800,ls:-3})+'<g stroke="'+INK+'" stroke-width="2"><line x1="120" y1="98" x2="120" y2="122"/><line x1="180" y1="98" x2="180" y2="122"/></g><circle cx="120" cy="130" r="9" fill="'+AC+'"'+RIM+'/><circle cx="180" cy="130" r="9" fill="'+AC2+'"'+RIM+'/>')],
+    ['Lentejuela','Una lentejuela grande, rombo amarillo con brillo, como marca.',
+      svg('<path d="M80 44 L124 90 L80 136 L36 90Z" fill="'+AC2+'"'+RIM+'/><path d="M80 44 L124 90 L80 90Z" fill="#fff" opacity=".45"/><circle cx="80" cy="90" r="7" fill="'+AC+'"/>'+t(205,106,'zings',{s:48,w:800,ls:-2}))],
+    ['Caireles','Flecos de hilo colgando bajo el nombre.',
+      svg(t(150,86,'zings',{s:56,w:800,ls:-3})+'<rect x="56" y="100" width="188" height="4" fill="'+AC+'"/>'+threads((function(){var o='';for(var i=0;i<20;i++)o+='<line x1="'+(60+i*9.6).toFixed(1)+'" y1="104" x2="'+(60+i*9.6).toFixed(1)+'" y2="'+(124+(i%2)*6)+'"/>';return o})(),2,AC2,AC,1.5))],
+    ['Z en círculo de puntos','Una Z fucsia dentro de un círculo de lentejuelas.',
+      svg((function(){var o='';for(var i=0;i<24;i++){var a=i/24*6.2832;o+='<circle cx="'+(80+Math.cos(a)*44).toFixed(1)+'" cy="'+(90+Math.sin(a)*44).toFixed(1)+'" r="3.5" fill="'+AC2+'"'+RIM+'/>'}return o})()+t(80,112,'Z',{s:62,w:800,c:AC})+t(205,106,'zings',{s:48,w:800,ls:-2}))]
+  ];
+  render('gh',H,'D');render('gl',L,'E');render('gp',P,'P');render('gf',Fe,'F');render('gk',K,'K');render('gt',Tl,'T');
+
+
+  function placeDots(){Array.prototype.forEach.call(document.querySelectorAll('text[data-dot]'),function(tx){try{var e=tx.getExtentOfChar(1),c=tx.parentNode.querySelector('.dot');c.setAttribute('cx',(e.x+e.width/2).toFixed(1));c.setAttribute('cy',(parseFloat(tx.getAttribute('y'))+parseFloat(tx.getAttribute('data-dy'))).toFixed(1))}catch(err){}})}
+  placeDots();if(document.fonts&&document.fonts.ready)document.fonts.ready.then(placeDots);
+  var wrap=$('wrap');
+  Array.prototype.forEach.call(document.querySelectorAll('.sw button'),function(b){b.addEventListener('click',function(){
+    wrap.setAttribute('data-bg',b.getAttribute('data-bg'));
+    Array.prototype.forEach.call(document.querySelectorAll('.sw button'),function(x){x.setAttribute('aria-pressed',x===b)})})});
+})();
+</script>
