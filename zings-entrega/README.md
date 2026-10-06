@@ -6,7 +6,8 @@ Prototipos de portada, logotipos y sistema de marca para zings.es (regalos y sou
 
 | Archivo | Contenido |
 |---|---|
-| `zings-rebrand.html` | Página principal: las diez portadas en pestañas, galería de miniaturas, tabla comparativa y recomendación |
+| `zings-rebrand.html` | Página principal: las once portadas en pestañas, galería de miniaturas, tabla comparativa y recomendación |
+| `zings-apple-s1.html` | **G · Apple Store · Sistema 1**: la estructura de la Apple Store con el manual de marca aplicado (anagrama de cuatro Z, fucsia y blanco, Inter, texturas de papel, arena y tinta). Archivo limpio e independiente, base para el tema hijo de PrestaShop |
 | `zings-apple.html` | F · Apple Store, con el logo Hombrera |
 | `zings-funcional.html` | A · Upfront |
 | `zings-editorial.html` | B · Dolce & Gabbana |
@@ -15,6 +16,16 @@ Prototipos de portada, logotipos y sistema de marca para zings.es (regalos y sou
 | `zings-artesana.html` | E · Loewe |
 
 Las cuatro portadas de estilo propio (Plaza de toros, Feria de Jerez, Cartel de toros, Traje de luces) están en las pestañas de `zings-rebrand.html`.
+
+## Apple Store · Sistema 1 (la web definitiva)
+
+`zings-apple-s1.html` aplica el manual `branding/ZiNGS-manual-de-marca-S1-anagrama.pdf` a la portada de estilo Apple Store:
+
+- **Logotipos**: icono fucsia con el anagrama en blanco en la barra de navegación (el avatar elegido), anagrama blanco a gran tamaño sobre la portada fucsia con textura, avatar circular en el bloque «Síguenos» y logotipo horizontal completo (anagrama + ZINGS + REGALOS DE ESPAÑA) en el pie, a 68 px para que el descriptor sea legible.
+- **Color**: tinta #0E0C0D, fucsia capote #E3177F (único acento; #C8106B en enlaces pequeños sobre blanco y #FF8AC6 sobre tinta), papel #F6F0E6, arena #E6C086 y blanco. El amarillo solo aparece dentro de los productos dibujados.
+- **Tipografía**: Inter 800 en titulares (tracking negativo), 600 en etiquetas en versalitas con tracking amplio, precios y subtítulos, 500/400 en texto corrido.
+- **Texturas**: manchas suaves y grano fino generados con filtros SVG (sin imágenes) sobre fucsia, papel, arena y tinta, como en el manual.
+- **Estructura de regalos**: categorías, «Lo último», regalos por precio, regalos para quién, apartado taurino en la navegación y el pie, «La diferencia ZiNGS» y «Síguenos». Los huecos de foto siguen siendo marcadores neutros.
 
 ## Marca
 
