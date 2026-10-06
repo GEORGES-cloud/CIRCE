@@ -26,7 +26,7 @@ Las cuatro portadas de estilo propio (Plaza de toros, Feria de Jerez, Cartel de 
 
 ## Fotografías
 
-La única fotografía es la de portada (`foto-portada.jpg`, el torero de espaldas ante el toro), aportada por ZiNGS, que va en las diez versiones. Todos los demás huecos de imagen (banners y tarjetas) llevan un marcador neutro a la espera de la fotografía propia de ZiNGS; no queda ninguna foto de muestra.
+No hay fotografías: todos los huecos de imagen, incluida la portada de cada versión y las zonas de foto de las plantillas de redes, llevan un marcador neutro («Foto» / «Tu foto») a la espera de la fotografía propia de ZiNGS.
 
 ## Guías de marca (PDF)
 
