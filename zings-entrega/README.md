@@ -33,3 +33,7 @@ No hay fotografías: todos los huecos de imagen, incluida la portada de cada ver
 En `branding/`, una guía por estilo (diez páginas, A4 apaisado): la idea, paleta con hex y proporciones, tipografía, las diez propuestas de logotipo con las tres recomendadas (o el símbolo Hombrera en la versión Apple Store), el logotipo en uso sobre cuatro fondos, la portada web en escritorio y móvil, producto y componentes, plantillas de redes y plan de redes (tono, pilares, ritmo del feed, hashtags, sí y no).
 
 En `branding/plantillas-redes/`, las plantillas de cada estilo en PNG listas para usar: post cuadrado (1080 × 1080), feed 4:5 (1080 × 1350) e historia (1080 × 1920).
+
+## Logos para redes sociales
+
+En `branding/logos-redes/`: dieciséis avatares en tres familias (A · Anagrama de cuatro Z, B · Hombrera, C · ZINGS tipográfico), tres portadas de 1500 × 500 y tres marcas de agua blancas con fondo transparente. `png/` a 1080 px, `svg/` con la tipografía Inter embebida, `zings-logos-redes.zip` con todo y `zings-logos-redes.html` con la vista previa recortada en círculo.
