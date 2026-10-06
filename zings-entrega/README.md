@@ -26,4 +26,4 @@ Las cuatro portadas de estilo propio (Plaza de toros, Feria de Jerez, Cartel de 
 
 ## Fotografías
 
-Las fotografías de las portadas son de muestra, con licencia libre (Wikimedia Commons, CC BY y CC BY-SA); los créditos van al pie de cada portada y en `fotos-creditos.json`. La web definitiva necesita fotografía propia de ZiNGS.
+La fotografía de portada (`foto-portada.jpg`, el torero de espaldas ante el toro) la aportó ZiNGS y va en las diez versiones. El resto de fotografías (banners y tarjetas) son de muestra, con licencia libre (Wikimedia Commons, CC BY y CC BY-SA); los créditos van al pie de cada portada y en `fotos-creditos.json`.
