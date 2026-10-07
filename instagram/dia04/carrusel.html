@@ -1,78 +1,76 @@
 <!doctype html><html lang="es"><head><meta charset="utf-8">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Inter+Tight:wght@200;300&display=swap" rel="stylesheet">
 <style>
-:root{--navy:#0a1626;--gold:#b99a62;--ink:#ece8de;--mut:#8d9099}
+:root{--navy:#0a1626;--ink:#ece8de;--mut:#8d9099}
 *{box-sizing:border-box;margin:0}
 body{background:#222}
 .s{width:1080px;height:1350px;position:relative;overflow:hidden;background:linear-gradient(180deg,#0b0b0c 0%,#0a1626 100%);color:var(--ink);font-family:'Inter Tight',sans-serif;font-weight:200}
 .abs{position:absolute}
-.ph{position:absolute;background-size:cover;background-position:center}
+.ph{position:absolute;inset:0;background-size:cover;background-position:center}
 .tint{position:absolute;inset:0}
-.cap{font-size:17px;letter-spacing:.34em;text-transform:uppercase;color:var(--mut);font-weight:300}
-.mut{color:var(--mut)}
-.serif{font-family:'Cormorant Garamond',serif;font-weight:300;letter-spacing:-.005em}
-.t{font-size:68px;line-height:1.08}
-.t i{font-style:italic;color:var(--ink)}
-.line{font-size:25px;line-height:1.7;color:#b9bcc4;font-weight:200;letter-spacing:.02em}
-.hair{position:absolute;background:rgba(236,232,222,.3)}
-.mark{position:absolute;width:104px;filter:drop-shadow(0 0 18px rgba(10,22,38,.9))}
+.cap{font-size:16px;letter-spacing:.38em;text-transform:uppercase;color:var(--mut);font-weight:300}
+.serif{font-family:'Cormorant Garamond',serif;font-weight:300}
+.t{font-size:70px;line-height:1.08}
+.t i{font-style:italic}
+.line{font-size:24px;line-height:1.7;color:#aeb2bb;font-weight:200;letter-spacing:.02em}
+.hair{position:absolute;background:rgba(236,232,222,.28);height:1px;width:56px}
+.center{left:0;width:1080px;text-align:center}
 </style></head><body>
 
-<!-- 1 · portada: foto aérea a sangre, título pequeño abajo -->
+<!-- 1 · portada: botella a sangre, negro→azul en la botella -->
 <section class="s" id="s1">
- <div class="ph" style="inset:0;background-image:url(foto_hileras-1440.jpg);background-size:140%;background-position:30% 40%"></div>
- <div class="tint" style="background:linear-gradient(180deg,rgba(11,11,12,.95) 0%,rgba(11,11,12,.55) 25%,rgba(10,22,38,.3) 55%,rgba(10,22,38,.95) 100%)"></div>
- <img class="mark" src="logo-gold.png" style="left:488px;top:84px">
- <div class="abs" style="left:96px;bottom:150px">
-  <div class="cap" style="margin-bottom:34px">Guía</div>
-  <div class="serif t" style="font-size:76px">Cómo reconocer<br>un buen <i>aceite</i></div>
+ <div class="ph" style="background-image:url(botellas_coupage_estudio.webp)"></div>
+ <div class="tint" style="background:radial-gradient(ellipse 65% 50% at 50% 50%,#12305a 0%,#0a1626 55%,#000 100%);mix-blend-mode:screen;opacity:.55"></div><div class="tint" style="background:radial-gradient(ellipse 80% 70% at 50% 50%,rgba(11,11,12,0) 55%,rgba(11,11,12,.85) 100%)"></div>
+ <div class="tint" style="background:linear-gradient(180deg,rgba(11,11,12,.7) 0%,rgba(11,11,12,0) 30%,rgba(11,11,12,0) 65%,rgba(11,11,12,.9) 100%)"></div>
+ <div class="abs center" style="top:100px"><div class="cap">Real de Cote</div></div>
+ <div class="abs center" style="bottom:130px">
+  <div class="serif t" style="font-size:62px">Cómo reconocer un buen <i>aceite</i></div>
  </div>
- <div class="hair" style="left:96px;bottom:110px;width:60px;height:1px"></div>
 </section>
 
-<!-- 2 · origen: foto en ventana descentrada -->
+<!-- 2 · origen: castillo a sangre -->
 <section class="s" id="s2">
- <div class="ph" style="left:96px;top:96px;width:620px;height:820px;background-image:url(foto_castillo-cote-1920.jpg);background-position:42% 40%"></div>
- <div class="tint" style="left:96px;top:96px;width:620px;height:820px;inset:auto;background:rgba(10,22,38,.28);left:96px;top:96px"></div>
- <div class="cap abs" style="left:96px;top:960px">I</div>
- <div class="serif abs" style="left:96px;top:1000px;font-size:54px;line-height:1.1">El origen</div>
- <div class="line abs" style="left:96px;top:1086px;width:470px">Cosecha y procedencia, siempre en la etiqueta.</div>
- <div class="cap abs mut" style="right:96px;top:104px;writing-mode:vertical-rl;letter-spacing:.4em">Real de Cote</div>
-</section>
-
-<!-- 3 · luz: recorte de botella, ventana alta a la derecha -->
-<section class="s" id="s3">
- <div class="abs" style="right:96px;top:150px;width:470px;height:880px;overflow:hidden;border:1px solid rgba(236,232,222,.14);background:#0a1626">
-  <div style="position:absolute;inset:0;background-image:url(botellas_coupage_estudio.webp);background-size:1230px auto;background-position:-355px -130px;mix-blend-mode:lighten"></div>
- </div>
- <div class="cap abs" style="left:96px;top:150px">II</div>
- <div class="serif abs" style="left:96px;top:196px;font-size:54px;line-height:1.1">La luz</div>
- <div class="line abs" style="left:96px;top:282px;width:300px">El vidrio oscuro protege el aceite.</div>
- </section>
-
-<!-- 4 · aroma: hoja a sangre, texto mínimo -->
-<section class="s" id="s4">
- <div class="ph" style="inset:0;background-image:url(foto_hoja-1920.jpg);background-position:40% 50%"></div>
- <div class="tint" style="background:linear-gradient(180deg,rgba(10,22,38,.15) 35%,rgba(10,22,38,.88) 100%)"></div>
+ <div class="ph" style="background-image:url(foto_castillo-cote-1920.jpg);background-position:45% 30%"></div>
+ <div class="tint" style="background:linear-gradient(180deg,rgba(11,11,12,.35) 0%,rgba(11,11,12,.1) 40%,rgba(10,22,38,.95) 100%)"></div>
  <div class="abs" style="left:96px;bottom:150px">
-  <div class="cap" style="margin-bottom:30px">III</div>
-  <div class="serif" style="font-size:64px;line-height:1.1">El aroma</div>
-  <div class="line" style="margin-top:22px">Hierba, tomate, almendra.</div>
+  <div class="cap" style="margin-bottom:28px">I</div>
+  <div class="serif" style="font-size:58px;line-height:1.1">El origen</div>
+  <div class="line" style="margin-top:18px">Cosecha y procedencia, en la etiqueta.</div>
  </div>
 </section>
 
-<!-- 5 · sabor: banda panorámica estrecha centrada, mucho aire -->
+<!-- 3 · luz: detalle del cuello y el tapón, muy ampliado -->
+<section class="s" id="s3">
+ <div class="ph" style="background-image:url(botellas_coupage_estudio.webp);background-size:2300px auto;background-position:50% 9%"></div>
+ <div class="tint" style="background:radial-gradient(ellipse 60% 45% at 50% 45%,#12305a 0%,#0a1626 55%,#000 100%);mix-blend-mode:screen;opacity:.5"></div><div class="tint" style="background:radial-gradient(ellipse 80% 70% at 50% 50%,rgba(11,11,12,0) 55%,rgba(11,11,12,.85) 100%)"></div>
+ <div class="abs" style="left:96px;top:140px">
+  <div class="cap" style="margin-bottom:28px">II</div>
+  <div class="serif" style="font-size:58px;line-height:1.1">La luz</div>
+  <div class="line" style="margin-top:18px">El vidrio oscuro protege el aceite.</div>
+ </div>
+</section>
+
+<!-- 4 · aroma: hoja a sangre -->
+<section class="s" id="s4">
+ <div class="ph" style="background-image:url(foto_hoja-1920.jpg);background-position:40% 50%"></div>
+ <div class="tint" style="background:linear-gradient(180deg,rgba(11,11,12,.2) 30%,rgba(10,22,38,.92) 100%)"></div>
+ <div class="abs" style="left:96px;bottom:150px">
+  <div class="cap" style="margin-bottom:28px">III</div>
+  <div class="serif" style="font-size:58px;line-height:1.1">El aroma</div>
+  <div class="line" style="margin-top:18px">Hierba, tomate, almendra.</div>
+ </div>
+</section>
+
+<!-- 5 · sabor: solo tipografía, centrado -->
 <section class="s" id="s5">
- <div class="ph" style="left:0;top:400px;width:1080px;height:360px;background-image:url(foto_bodega-1920.jpg);background-position:62% 30%;background-size:170%"></div>
- <div class="tint" style="inset:auto;left:0;top:400px;width:1080px;height:360px;background:rgba(10,22,38,.25)"></div>
- <div class="cap abs" style="left:96px;top:880px">IV</div>
- <div class="serif abs" style="left:96px;top:922px;font-size:54px;line-height:1.1">El sabor</div>
- <div class="line abs" style="left:96px;top:1008px;width:520px">Amargo y picante: señales de frescura.</div>
+ <div class="abs center" style="top:520px"><div class="cap">IV</div></div>
+ <div class="abs center serif" style="top:580px;font-size:64px;line-height:1.1">El sabor</div>
+ <div class="hair" style="left:512px;top:700px"></div>
+ <div class="abs center line" style="top:740px">Amargo y picante.<br>Señales de frescura.</div>
 </section>
 
 <!-- 6 · cierre -->
-<section class="s" id="s6" style="background:radial-gradient(ellipse 70% 40% at 50% 46%,#13294a 0%,#0a1626 55%,#0b0b0c 100%)">
- <img src="logo-gold.png" style="position:absolute;width:170px;left:455px;top:520px">
- <div class="cap abs" style="left:0;width:1080px;text-align:center;top:800px;letter-spacing:.4em;font-size:16px">realdecote.es</div>
+<section class="s" id="s6" style="background:radial-gradient(ellipse 60% 36% at 50% 48%,#0f2240 0%,#0a1626 50%,#0b0b0c 100%)">
+ <img src="logo-gold.png" style="position:absolute;width:150px;left:465px;top:540px"><div class="abs center cap" style="top:800px;font-size:15px">realdecote.es</div>
 </section>
 </body></html>
