@@ -14,13 +14,13 @@ posts.append(f'''<section class="s">{photo('foto_hileras-1440.jpg','35% 45%','15
 <img src="logo-gold.png" class="abs" style="width:360px;left:360px;top:420px">
 <div class="abs tag" style="left:72px;bottom:72px">Aceite de oliva virgen extra</div></section>''')
 # 2 · texto claro
-posts.append(light('Real de Cote','Cinco aceites.<br>Una sola casa.','Coupage, Manzanilla, Arbequina, Hojiblanca y BIO, todos sin filtrar, en 500 ml y 250 ml.','Más información'))
+posts.append(dark_over('muro-2400.jpg','Real de Cote','Cinco aceites.<br>Una sola casa.','50% 50%','Descubrir','.35'))
 # 3 · botella coupage sobre negro (foto de estudio)
 posts.append(f'''<section class="s">{photo('botellas_coupage_estudio.webp')}<div class="abs cap" style="left:0;width:1080px;text-align:center;bottom:84px">Coupage<small>De la casa</small></div></section>''')
 # 4 · plato
 posts.append(f'<section class="s">{photo("mesa-1-1920.jpg","50% 40%")}</section>')
 # 5 · En la mesa (texto claro, como la sección)
-posts.append(light('Real de Cote','En la mesa','Un aceite para terminar el plato, no para esconderlo.','@realdecote'))
+posts.append(dark_over('mesa-5-1920.jpg','Real de Cote','En la mesa','50% 45%','@realdecote','.3'))
 # 6 · plato
 posts.append(f'<section class="s">{photo("mesa-3-1920.jpg","50% 50%")}</section>')
 # 7 · almazara
@@ -28,7 +28,7 @@ posts.append(dark_over('foto_bodega-1920.jpg','Real de Cote','La almazara','60% 
 # 8 · botella BIO
 posts.append(f'''<section class="s">{photo('botellas_bio_estudio.webp')}<div class="abs cap" style="left:0;width:1080px;text-align:center;bottom:84px">BIO<small>Ecológico</small></div></section>''')
 # 9 · legado
-posts.append(light('Legado','Montellano, Sevilla','Al sur de la provincia, donde la campiña se encuentra con la sierra. Cerca del pueblo, el castillo de Cote se alza entre colinas de olivar.','Explorar'))
+posts.append(dark_over('finca-1920.jpg','Legado','Montellano, Sevilla','50% 50%','Explorar','.35'))
 # 10 · castillo
 posts.append(f'<section class="s">{photo("foto_castillo-cote-1920.jpg","45% 35%")}</section>')
 # 11 · colección: cinco botellas sobre negro
