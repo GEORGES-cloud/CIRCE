@@ -1,98 +1,78 @@
 <!doctype html><html lang="es"><head><meta charset="utf-8">
-<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Inter+Tight:wght@200;300&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#0b0b0c;--navy:#0a1626;--gold:#c9a96b;--ink:#f1ede4;--mut:#9a968c}
+:root{--navy:#0a1626;--gold:#b99a62;--ink:#ece8de;--mut:#8d9099}
 *{box-sizing:border-box;margin:0}
-body{background:#222;font-family:'Inter Tight',system-ui,sans-serif}
-.s{width:1080px;height:1350px;position:relative;overflow:hidden;background:linear-gradient(180deg,#12294b 0%,#0a1626 100%);color:var(--ink);padding:96px 90px;display:flex;flex-direction:column}
-.bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:.35;mix-blend-mode:luminosity}
-.shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,22,38,.55),rgba(10,22,38,.1) 45%,rgba(10,22,38,.7))}
-.s>*{position:relative}
-.top{display:flex;justify-content:space-between;font-size:24px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
-.top span:last-child{color:var(--mut)}
-.num{font-size:200px;font-weight:300;color:var(--gold);line-height:1;margin-top:90px;letter-spacing:-.04em}
-h1{font-weight:400;font-size:104px;line-height:1.02;letter-spacing:-.025em}
-h2{font-weight:400;font-size:84px;line-height:1.05;letter-spacing:-.02em;margin-top:30px}
-h1 em,h2 em{font-style:normal;color:var(--gold)}
-p{font-size:40px;line-height:1.38;color:#cfcabd;font-weight:300;margin-top:44px}
-.rule{width:90px;height:2px;background:var(--gold);margin:44px 0}
-.grow{flex:1}
-.foot{display:flex;justify-content:space-between;align-items:flex-end;font-size:24px;letter-spacing:.22em;text-transform:uppercase;color:var(--mut)}
-.foot img{height:70px}
-.bottle{position:absolute;right:-60px;bottom:-40px;height:900px;mix-blend-mode:lighten;mask-image:linear-gradient(90deg,transparent,#000 30%);-webkit-mask-image:linear-gradient(90deg,transparent,#000 30%)}
-.chips{display:flex;gap:16px;flex-wrap:wrap;margin-top:44px}
-.chip{border:1.5px solid var(--gold);color:var(--gold);padding:14px 28px;border-radius:99px;font-size:30px}
-.bad{color:#d98b7a}
+body{background:#222}
+.s{width:1080px;height:1350px;position:relative;overflow:hidden;background:linear-gradient(180deg,#0f2038,#0a1626 70%);color:var(--ink);font-family:'Inter Tight',sans-serif;font-weight:200}
+.abs{position:absolute}
+.ph{position:absolute;background-size:cover;background-position:center}
+.tint{position:absolute;inset:0}
+.cap{font-size:17px;letter-spacing:.34em;text-transform:uppercase;color:var(--gold);font-weight:300}
+.mut{color:var(--mut)}
+.serif{font-family:'Cormorant Garamond',serif;font-weight:300;letter-spacing:-.005em}
+.t{font-size:68px;line-height:1.08}
+.t i{font-style:italic;color:var(--gold)}
+.line{font-size:25px;line-height:1.7;color:#b9bcc4;font-weight:200;letter-spacing:.02em}
+.hair{position:absolute;background:rgba(185,154,98,.45)}
+.mark{position:absolute;width:104px;filter:drop-shadow(0 0 18px rgba(10,22,38,.9))}
 </style></head><body>
 
-<section class="s" id="s1" style="background:radial-gradient(ellipse 90% 60% at 50% 22%,#1b3a68 0%,#0f2342 45%,#0a1626 100%)">
- <div class="bg" style="background-image:url(foto_hileras-1440.jpg)"></div><div class="shade"></div>
- <img class="bottle" src="botellas_coupage_estudio.webp">
- <div class="top"><span>Real de Cote</span><span>Guía</span></div>
- <h1 style="margin-top:110px;max-width:900px">Cómo saber si tu aceite es <em>bueno</em></h1>
- <div class="rule"></div>
- <p style="margin-top:0;max-width:520px">6 señales que puedes comprobar en casa, sin ser catador.</p>
- <div class="grow"></div><div class="foot"><span>Desliza →</span><img src="logo-gold.png"></div>
+<!-- 1 · portada: foto aérea a sangre, título pequeño abajo -->
+<section class="s" id="s1">
+ <div class="ph" style="inset:0;background-image:url(foto_hileras-1440.jpg);background-size:140%;background-position:30% 40%"></div>
+ <div class="tint" style="background:linear-gradient(180deg,rgba(10,22,38,.55),rgba(10,22,38,.25) 40%,rgba(10,22,38,.92) 100%)"></div>
+ <img class="mark" src="logo-gold.png" style="left:488px;top:84px">
+ <div class="abs" style="left:96px;bottom:150px">
+  <div class="cap" style="margin-bottom:34px">Guía</div>
+  <div class="serif t" style="font-size:76px">Cómo reconocer<br>un buen <i>aceite</i></div>
+ </div>
+ <div class="hair" style="left:96px;bottom:110px;width:60px;height:1px"></div>
 </section>
 
+<!-- 2 · origen: foto en ventana descentrada -->
 <section class="s" id="s2">
- <div class="top"><span>Real de Cote</span><span>01 / 06</span></div>
- <div class="num">01</div>
- <h2>Lee la <em>etiqueta</em></h2>
- <p>Debe poner «aceite de oliva virgen extra», no «aceite de oliva» a secas. Busca también la campaña de cosecha y el origen.</p>
- <div class="grow"></div><div class="foot"><span>Primer filtro</span><img src="logo-gold.png"></div>
+ <div class="ph" style="left:96px;top:96px;width:620px;height:820px;background-image:url(foto_castillo-cote-1920.jpg);background-position:42% 40%"></div>
+ <div class="tint" style="left:96px;top:96px;width:620px;height:820px;inset:auto;background:rgba(10,22,38,.28);left:96px;top:96px"></div>
+ <div class="cap abs" style="left:96px;top:960px">I</div>
+ <div class="serif abs" style="left:96px;top:1000px;font-size:54px;line-height:1.1">El origen</div>
+ <div class="line abs" style="left:96px;top:1086px;width:470px">Cosecha y procedencia, siempre en la etiqueta.</div>
+ <div class="cap abs mut" style="right:96px;top:104px;writing-mode:vertical-rl;letter-spacing:.4em">Real de Cote</div>
 </section>
 
+<!-- 3 · luz: recorte de botella, ventana alta a la derecha -->
 <section class="s" id="s3">
- <div class="top"><span>Real de Cote</span><span>02 / 06</span></div>
- <div class="num">02</div>
- <h2>Mira el <em>envase</em></h2>
- <p>La luz estropea el aceite. Una botella oscura o una lata lo protegen; una transparente expuesta en un estante, no tanto.</p>
- <div class="grow"></div><div class="foot"><span>Por eso nuestra botella es negra</span><img src="logo-gold.png"></div>
-</section>
+ <div class="abs" style="right:96px;top:150px;width:470px;height:880px;overflow:hidden;border:1px solid rgba(185,154,98,.35);background:#0a1626">
+  <div style="position:absolute;inset:0;background-image:url(botellas_coupage_estudio.webp);background-size:1230px auto;background-position:-355px -130px;mix-blend-mode:lighten"></div>
+ </div>
+ <div class="cap abs" style="left:96px;top:150px">II</div>
+ <div class="serif abs" style="left:96px;top:196px;font-size:54px;line-height:1.1">La luz</div>
+ <div class="line abs" style="left:96px;top:282px;width:300px">El vidrio oscuro protege el aceite.</div>
+ </section>
 
+<!-- 4 · aroma: hoja a sangre, texto mínimo -->
 <section class="s" id="s4">
- <div class="top"><span>Real de Cote</span><span>03 / 06</span></div>
- <div class="num">03</div>
- <h2>Huele <em>antes</em> de probar</h2>
- <p>Un buen virgen extra huele a fruta fresca: aceituna verde, hierba recién cortada, tomate, almendra.</p>
- <div class="chips"><span class="chip">Hierba</span><span class="chip">Tomate</span><span class="chip">Almendra</span><span class="chip">Aceituna verde</span></div>
- <p><span class="bad">Mala señal:</span> olor a rancio, humedad o grasa vieja.</p>
- <div class="grow"></div><div class="foot"><span>La nariz no miente</span><img src="logo-gold.png"></div>
+ <div class="ph" style="inset:0;background-image:url(foto_hoja-1920.jpg);background-position:40% 50%"></div>
+ <div class="tint" style="background:linear-gradient(180deg,rgba(10,22,38,.15) 35%,rgba(10,22,38,.88) 100%)"></div>
+ <div class="abs" style="left:96px;bottom:150px">
+  <div class="cap" style="margin-bottom:30px">III</div>
+  <div class="serif" style="font-size:64px;line-height:1.1">El aroma</div>
+  <div class="line" style="margin-top:22px">Hierba, tomate, almendra.</div>
+ </div>
 </section>
 
+<!-- 5 · sabor: banda panorámica estrecha centrada, mucho aire -->
 <section class="s" id="s5">
- <div class="top"><span>Real de Cote</span><span>04 / 06</span></div>
- <div class="num">04</div>
- <h2>Prueba un <em>sorbito</em></h2>
- <p>Un toque de amargor y un picor en la garganta que te hace toser un poco son buena señal: indican frescura y presencia de polifenoles.</p>
- <p style="margin-top:30px">No es un defecto. Es carácter.</p>
- <div class="grow"></div><div class="foot"><span>Pruébalo solo, en cuchara</span><img src="logo-gold.png"></div>
+ <div class="ph" style="left:0;top:400px;width:1080px;height:360px;background-image:url(foto_bodega-1920.jpg);background-position:62% 30%;background-size:170%"></div>
+ <div class="tint" style="inset:auto;left:0;top:400px;width:1080px;height:360px;background:rgba(10,22,38,.25)"></div>
+ <div class="cap abs" style="left:96px;top:880px">IV</div>
+ <div class="serif abs" style="left:96px;top:922px;font-size:54px;line-height:1.1">El sabor</div>
+ <div class="line abs" style="left:96px;top:1008px;width:520px">Amargo y picante: señales de frescura.</div>
 </section>
 
+<!-- 6 · cierre -->
 <section class="s" id="s6">
- <div class="top"><span>Real de Cote</span><span>05 / 06</span></div>
- <div class="num">05</div>
- <h2>Desconfía del <em>precio</em> demasiado bajo</h2>
- <p>Cosechar a tiempo y extraer en frío con cuidado cuesta. Si un litro cuesta menos que un café, algo se ha quedado por el camino.</p>
- <div class="grow"></div><div class="foot"><span>Calidad = trabajo</span><img src="logo-gold.png"></div>
-</section>
-
-<section class="s" id="s7">
- <div class="top"><span>Real de Cote</span><span>06 / 06</span></div>
- <div class="num">06</div>
- <h2>Guárdalo <em>bien</em></h2>
- <p>Lejos de la luz y del calor, bien cerrado. Un buen aceite se echa a perder en una encimera junto a los fogones.</p>
- <div class="grow"></div><div class="foot"><span>Termina el día con luz baja</span><img src="logo-gold.png"></div>
-</section>
-
-<section class="s" id="s8" style="background:radial-gradient(ellipse 90% 60% at 50% 30%,#1b3a68 0%,#0f2342 45%,#0a1626 100%);align-items:center;text-align:center;justify-content:center">
- <div class="bg" style="background-image:url(foto_hoja-1920.jpg);opacity:.6"></div><div class="shade"></div>
- <img src="logo-gold.png" style="width:260px;margin-bottom:60px">
- <h1 style="font-size:92px">Prueba la diferencia</h1>
- <div class="rule" style="margin:44px auto"></div>
- <p style="margin-top:0">Cinco aceites. Una sola casa.<br>Sin filtrar. Montellano, Sevilla.</p>
- <p style="color:var(--gold);margin-top:60px;letter-spacing:.14em;text-transform:uppercase;font-size:30px">realdecote.es · @realdecote</p>
- <p style="font-size:28px;margin-top:40px;color:var(--mut)">Guárdalo y compártelo con quien siga comprando por el precio.</p>
+ <img src="logo-gold.png" style="position:absolute;width:170px;left:455px;top:520px">
+ <div class="cap abs" style="left:0;width:1080px;text-align:center;top:800px;letter-spacing:.4em;font-size:16px">realdecote.es</div>
 </section>
 </body></html>
